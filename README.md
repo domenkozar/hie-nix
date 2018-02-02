@@ -19,5 +19,13 @@ Hie built with specific GHC needs to match the major version of GHC used on deve
     $ hie-8.0 --help
     $ hie-8.2 --help
 
+# Updating HIE
+
+    # TODO: how to install stack2nix
+    $ ./update.sh
+
+# FAQ
+
+## How do I make editor integrate the right hie version?
 
 To follow discussion how correct version of hie is picked per project, read https://github.com/haskell/haskell-ide-engine/issues/439#issuecomment-359801662
