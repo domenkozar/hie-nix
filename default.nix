@@ -8,13 +8,13 @@ let
     };
   };
   versions = {
-    "hie-8.0" = hie80Pkgs.haskell-ide-engine;
-    "hie-8.2" = (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
   };
 in with pkgs; {
  hies = runCommandNoCC "hies" {} ''
    mkdir -p $out/bin
-   ln -s ${versions."hie-8.0"}/bin/hie $out/bin/hie-8.0
-   ln -s ${versions."hie-8.2"}/bin/hie $out/bin/hie-8.2
+   ln -s ${hie80}/bin/hie $out/bin/hie-8.0
+   ln -s ${hie82}/bin/hie $out/bin/hie-8.2
  '';
-} // versions
+ hie80 = hie80Pkgs.haskell-ide-engine;
+ hie82 = (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
+}

@@ -12,7 +12,11 @@ Hie built with specific GHC needs to match the major version of GHC used on deve
 # Install
 
     $ git clone https://github.com/domenkozar/hie-nix.git
-    $ nix-env -f hie-nix -i hies
+    $ nix-env -f hie-nix -iA hies
+
+Or for just a specific GHC:
+
+    $ nix-env -f hie-nix -iA hie82
 
 # Usage
 
