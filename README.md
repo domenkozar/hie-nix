@@ -1,6 +1,3 @@
-Note: this is a WIP document, once usage is agreed, it will be
-implemented using https://github.com/input-output-hk/stack2nix
-
 # Purpose
 
 The purpose of this repository is to provide [HIE](https://github.com/haskell/haskell-ide-engine)
