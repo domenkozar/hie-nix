@@ -10,6 +10,12 @@ let
   versions = {
   };
 in with pkgs; {
+ stack2nix = import (pkgs.fetchFromGitHub {
+   owner = "input-output-hk";
+   repo = "stack2nix";
+   rev = "86f5b42524d486defe26107a37211b3faa576c39";
+   sha256 = "1xgp299nm9xbl4a2wgvch4210y2xm4c53b0lqhgsp5x8sdsyyh7c";
+ }) { inherit pkgs; };
  hies = runCommandNoCC "hies" {} ''
    mkdir -p $out/bin
    ln -s ${hie80}/bin/hie $out/bin/hie-8.0
