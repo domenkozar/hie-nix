@@ -22,7 +22,6 @@ Or for just a specific GHC:
 
 # Updating HIE
 
-    # TODO: how to install stack2nix
     $ ./update.sh
 
 # FAQ
