@@ -9,7 +9,7 @@ let
   };
   versions = {
   };
-in with pkgs; {
+in with pkgs; rec {
  stack2nix = import (pkgs.fetchFromGitHub {
    owner = "input-output-hk";
    repo = "stack2nix";
