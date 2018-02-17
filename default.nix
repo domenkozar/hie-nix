@@ -1,6 +1,6 @@
+{ pkgs ? (import (import ./fetch-nixpkgs.nix) {}) }:
 
 let
-  pkgs = import (import ./fetch-nixpkgs.nix) {};
   hie80Pkgs = (import ./ghc-8.0.nix { inherit pkgs; }).override {
     overrides = self: super: {
       # TODO: unnecessary with https://github.com/input-output-hk/stack2nix/issues/84#issuecomment-362035573
