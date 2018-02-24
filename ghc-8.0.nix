@@ -3776,6 +3776,8 @@ inherit (pkgs.xorg) libXrender;};
            pname = "amazonka-s3-streaming";
            version = "0.2.0.3";
            sha256 = "6038a52dd08eaadbd9d63f61d1dc5f9a0b14660bb39c2c43a1728e598bf1cdde";
+           revision = "1";
+           editedCabalFile = "0c4b6xs8avvaxjx87nbsqgliqx40pas9h6h4gsc174mla9yrfkfz";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -16822,8 +16824,8 @@ inherit (pkgs) which;};
            pname = "hackage-security";
            version = "0.5.2.2";
            sha256 = "507a837851264a774c8f4d400f798c3dac5be11dc428fe72d33ef594ca533c41";
-           revision = "4";
-           editedCabalFile = "154xjzmzg14zcqxzhcf0kmdmm6hwnhx19x6kddakkrylfqap14j2";
+           revision = "5";
+           editedCabalFile = "0f1ml7dvwk4xrz3gsf133n67cbxzf0sz5frxfsx9i79x1yrg9zdj";
            libraryHaskellDepends = [
              base base16-bytestring base64-bytestring bytestring Cabal
              containers cryptohash-sha256 directory ed25519 filepath ghc-prim
@@ -17397,8 +17399,8 @@ inherit (pkgs) which;};
            version = "0.1.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "1v002z1lzzm6cga4hybkdn3i48fy4pwwgxaha9ab2aq18i27ghl2";
-             rev = "725db6af3c5a672571ae1a05919725639f1fee5e";
+             sha256 = "0zk57lzfknlf4kjansw9irc39ys5y7b2l02289kcgb78hsg878wj";
+             rev = "5b8150471ad416329d987edec99332e113c2d0e4";
            };
            isLibrary = true;
            isExecutable = true;
@@ -18473,8 +18475,8 @@ inherit (pkgs) which;};
            version = "0.1.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "1v002z1lzzm6cga4hybkdn3i48fy4pwwgxaha9ab2aq18i27ghl2";
-             rev = "725db6af3c5a672571ae1a05919725639f1fee5e";
+             sha256 = "0zk57lzfknlf4kjansw9irc39ys5y7b2l02289kcgb78hsg878wj";
+             rev = "5b8150471ad416329d987edec99332e113c2d0e4";
            };
            postUnpack = "sourceRoot+=/hie-plugin-api; echo source root reset to $sourceRoot";
            libraryHaskellDepends = [
@@ -26416,8 +26418,8 @@ inherit (pkgs) which;};
            pname = "natural-transformation";
            version = "0.4";
            sha256 = "aac28e2c1147ed77c1ec0f0eb607a577fa26d0fd67474293ba860ec124efc8af";
-           revision = "3";
-           editedCabalFile = "0z6vmdgz9r2fbgzh2xvrw6cy5h7m1jv911jah615s6xgr52smhrf";
+           revision = "4";
+           editedCabalFile = "1zppa1fcc7pl7ak0hs3w3pkx34398nrfiiwa3w689ib08kqkdpby";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -28004,6 +28006,8 @@ inherit (pkgs) which;};
            pname = "parallel";
            version = "3.2.1.1";
            sha256 = "323bb9bc9e36fb9bfb08e68a772411302b1599bfffbc6de20fa3437ce1473c17";
+           revision = "1";
+           editedCabalFile = "12sgigg7r4nmyhbfn1p09ajf4s576yca31b7daj5zpp1mxgb5x7i";
            libraryHaskellDepends = [ array base containers deepseq ];
            doHaddock = false;
            doCheck = false;
@@ -29917,8 +29921,8 @@ inherit (pkgs) which;};
            pname = "prettyprinter-compat-annotated-wl-pprint";
            version = "1";
            sha256 = "2c259bac999d75b071a077f218a433c070783e9f40b67796e31a776fefbaf57e";
-           revision = "2";
-           editedCabalFile = "175bchsbx8vws1gx83z9f0l30p95353l0gyds5b0k5b5sj4fzw13";
+           revision = "3";
+           editedCabalFile = "0vzi7id60pfj35xp61akzvfx9x6py45r5b8343i48ljpir91rvgw";
            libraryHaskellDepends = [ base prettyprinter text ];
            doHaddock = false;
            doCheck = false;
@@ -29934,6 +29938,8 @@ inherit (pkgs) which;};
            pname = "prettyprinter-compat-ansi-wl-pprint";
            version = "1.0.1";
            sha256 = "012d6bb711da25cc38260f4d00d26c24e52547a0ca53b0f6459fd06e5b93f73f";
+           revision = "1";
+           editedCabalFile = "0rzvap56ygygzs95091ipmcdc7n76sczc2dk88g4nr7zskb2nf1k";
            libraryHaskellDepends = [
              base prettyprinter prettyprinter-ansi-terminal text
            ];
@@ -29949,8 +29955,8 @@ inherit (pkgs) which;};
            pname = "prettyprinter-compat-wl-pprint";
            version = "1.0.0.1";
            sha256 = "75221f5064e69eead5807a62894e8b5aa768f979c7f8fb75d0e1b2a15345529e";
-           revision = "2";
-           editedCabalFile = "0j495j9crv6qi7rq044x6bx8688zqybx5w02cbv54w208ii1pzcl";
+           revision = "3";
+           editedCabalFile = "0cb1i1hmr6wl8lacy3w822h273lapqhp537snxgbmhf9xvfckbpr";
            libraryHaskellDepends = [ base prettyprinter text ];
            doHaddock = false;
            doCheck = false;
@@ -37375,6 +37381,8 @@ inherit (pkgs) which;};
            pname = "th-abstraction";
            version = "0.2.6.0";
            sha256 = "e52e289a547d68f203d65f2e63ec2d87a3c613007d2fe873615c0969b981823c";
+           revision = "1";
+           editedCabalFile = "0k4s4nbg9jlgaza38842jnzs8s01ig85fzmjgd10k9hl02gc3r44";
            libraryHaskellDepends = [
              base containers ghc-prim template-haskell
            ];
