@@ -29,3 +29,12 @@ Or for just a specific GHC:
 ## How do I make editor integrate the right hie version?
 
 To follow discussion how correct version of hie is picked per project, read https://github.com/haskell/haskell-ide-engine/issues/439#issuecomment-359801662
+
+## Does hie-nix work with Stack?
+
+Yes, but make sure you have Nix enabled in either `stack.yaml` in your project or globally:
+
+    $ cat ~/.stack/config.yaml
+    nix: 
+      enable: true
+
