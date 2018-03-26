@@ -1,0 +1,6 @@
+language: nix
+sudo: required
+before_script:
+- sudo mount -o remount,exec,size=4G,mode=755 /run/user || true
+script:
+ - nix-build -A hies -j2
