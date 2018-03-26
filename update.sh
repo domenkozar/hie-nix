@@ -1,6 +1,6 @@
 STACK2NIX=$(nix-build -A stack2nix)/bin/stack2nix
 
-COMMIT=1051cc69d3434f4ccf67e03846410ec463135db9
+COMMIT=d1053a5e0abac9beb9616bcc7105af883467aca6
 URL=https://github.com/haskell/haskell-ide-engine.git
 
 $STACK2NIX --revision $COMMIT $URL > ghc-8.2.nix
