@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: nixos:nix
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: nix-build -A hies
