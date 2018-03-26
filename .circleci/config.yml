@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
+    working_directory: /src
     docker:
-      - image: nixos:nix
+      - image: numtide/circleci-nix
     steps:
       - checkout
       - run:
