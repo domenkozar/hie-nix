@@ -898,8 +898,8 @@ inherit (pkgs) zlib;};
          }:
          mkDerivation {
            pname = "HTTP";
-           version = "4000.3.8";
-           sha256 = "603a59b0a1ba938efa8a86ac3347e2ff5ad41422146782782fc5a162fb09cdf0";
+           version = "4000.3.9";
+           sha256 = "05962b8a6248d348977af2a755f0ed57a6ab523185235546dd66cf90a54663ff";
            libraryHaskellDepends = [
              array base bytestring mtl network network-uri parsec time
            ];
@@ -948,10 +948,11 @@ inherit (pkgs) zlib;};
            pname = "HaRe";
            version = "0.8.4.1";
            src = fetchgit {
-             url = "https://gitlab.com/alanz/HaRe.git";
-             sha256 = "0z7r3l4j5a1brz7zb2rgd985m58rs0ki2p59y1l9i46fcy8r9y4g";
-             rev = "e325975450ce89d790ed3f92de3ef675967d9538";
+             url = "https://github.com/haskell/haskell-ide-engine.git";
+             sha256 = "1xhrqqlnwa165v4xbk47n7pw129mgx5p2l2si5dag9sgiydb34d9";
+             rev = "0aa338d072c603b91c1ddff4805e4b0eb9440de4";
            };
+           postUnpack = "sourceRoot+=/./submodules/HaRe; echo source root reset to $sourceRoot";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -1235,8 +1236,8 @@ inherit (pkgs) zlib;};
            pname = "JuicyPixels-scale-dct";
            version = "0.1.1.2";
            sha256 = "9abd9d00520424912201b58343f252362b9f34760023d3324732ca00a906fe96";
-           revision = "2";
-           editedCabalFile = "04g0yga3v0922aysqv2m2h7vxbaaxfdb7lafsakpzlp0w659f930";
+           revision = "3";
+           editedCabalFile = "0z1ks049q9jsc5ysh12idkqf3rz0bnvv74rhlaw24r5q2xj8lv8i";
            libraryHaskellDepends = [
              base base-compat carray fft JuicyPixels
            ];
@@ -1484,10 +1485,8 @@ inherit (pkgs) zlib;};
         ({ mkDerivation, AC-Vector, base, QuickCheck, stdenv }:
          mkDerivation {
            pname = "Octree";
-           version = "0.5.4.3";
-           sha256 = "4fd8aa7fbbcc2387e06159b0d96c8ede26812ebe85b5d6931ce4bb8b1972b465";
-           revision = "1";
-           editedCabalFile = "1ysmpp7knrkxh68q6nq012877mn51sgzjrpls7d80pkg4pgkf42a";
+           version = "0.5.4.4";
+           sha256 = "5a4e1d322642197902a964c0f89a4e45004ae8828a0b658bbea25de0e28cb528";
            libraryHaskellDepends = [ AC-Vector base QuickCheck ];
            doHaddock = false;
            doCheck = false;
@@ -1501,6 +1500,8 @@ inherit (pkgs) zlib;};
            pname = "OneTuple";
            version = "0.2.1";
            sha256 = "4b6f74b6d92df112b0f4eaf15ccdc5fbb763d59f07e9a2afa5690ef89159a2f4";
+           revision = "1";
+           editedCabalFile = "1kb7f21n9vwwrk4kipqdwdqs94k34zai6yy0kgdn22zi442yicjh";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -1566,8 +1567,8 @@ inherit (pkgs) zlib;};
          }:
          mkDerivation {
            pname = "OpenGLRaw";
-           version = "3.2.5.0";
-           sha256 = "af0f4d2e5677d715b11846dea3195ed7dd0c4b7ec515dc7ad6b188ae71dc3db7";
+           version = "3.2.7.0";
+           sha256 = "62723d0fc287e5e5e93853b1fed0ca76495e6b693261aa9aae35340182a58a08";
            libraryHaskellDepends = [
              base bytestring containers fixed half text transformers
            ];
@@ -1584,6 +1585,8 @@ inherit (pkgs) zlib;};
            pname = "PSQueue";
            version = "1.1";
            sha256 = "a8e0871ad10f916f55c3b9baec53eff23c4e97e09cf96d6c66771789e00a49cc";
+           revision = "1";
+           editedCabalFile = "0gpx33bkhpwya7prnqzwpbnylm4v4nm4x8m02ggmj7d6rkklb2qq";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -1724,10 +1727,8 @@ inherit (pkgs) zlib;};
         ({ mkDerivation, base, SDL, stdenv }:
          mkDerivation {
            pname = "SDL";
-           version = "0.6.5.1";
-           sha256 = "864c336c8b7f9f9b0239ce2d62521c4e2fd101e67f8cde6d5c2fe8bc47ff43e9";
-           revision = "1";
-           editedCabalFile = "0gj76j31i8rnlnvkf6hr8ljc6qmqqqcndy0bgrcppji78zg3ygi3";
+           version = "0.6.6.0";
+           sha256 = "1f7c0c991dd27b8b7987ba55abc305c491af723337288970a8a2f25d306ced72";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [ base ];
            librarySystemDepends = [ SDL ];
@@ -2193,8 +2194,8 @@ inherit (pkgs.xorg) libXrender;};
         ({ mkDerivation, base, deepseq, random, stdenv }:
          mkDerivation {
            pname = "Yampa";
-           version = "0.10.6.2";
-           sha256 = "6f48e8ed1909229a9257f7d7831e441bdf6a62ef52e3dae89d4d37d3a2a828b4";
+           version = "0.10.7";
+           sha256 = "14b13dcb9e52a4c6f738d7515d82d681618720de5598ec11448646333193d1c5";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [ base deepseq random ];
@@ -2340,8 +2341,8 @@ inherit (pkgs.xorg) libXrender;};
            pname = "active";
            version = "0.2.0.13";
            sha256 = "5d9a141d58bcefbf699ed233a22309ded671c25ed64bcee11a663d00731280fb";
-           revision = "3";
-           editedCabalFile = "0jm8kkqa5k9nppis3jdx11nmds6w0x62rmnv5bn5q3b75llhnlc1";
+           revision = "4";
+           editedCabalFile = "1p2gaazj7r98v45d57hshgv6nxam5l47dl6y9iq65z5zqylmz7q2";
            libraryHaskellDepends = [
              base lens linear semigroupoids semigroups vector
            ];
@@ -2538,8 +2539,8 @@ inherit (pkgs.xorg) libXrender;};
         ({ mkDerivation, aeson, base, stdenv }:
          mkDerivation {
            pname = "aeson-generic-compat";
-           version = "0.0.1.0";
-           sha256 = "d4a05e4d351350f4ce7e270c85dcd990c81d879fd1208a6371865f5b2190d3ad";
+           version = "0.0.1.1";
+           sha256 = "ba46aa8e57d79c5e865d0224e8642c20facc59a4d2a9fba3b669928ec8835bb5";
            libraryHaskellDepends = [ aeson base ];
            doHaddock = false;
            doCheck = false;
@@ -2629,8 +2630,8 @@ inherit (pkgs.xorg) libXrender;};
            pname = "aeson-utils";
            version = "0.3.0.2";
            sha256 = "71814b1be8849f945395eb81217a2ad464f2943134c50c09afd8a3126add4b1f";
-           revision = "5";
-           editedCabalFile = "0v6p99nb8s61lc07a93xv94lfb4ybmv8aiqjq77lncs6qgpp97xf";
+           revision = "6";
+           editedCabalFile = "06jpkp95sicqv9kjasgwwd89kfrnz37402ppvgg5567sbg1wm9zh";
            libraryHaskellDepends = [
              aeson attoparsec base bytestring scientific text
            ];
@@ -2812,8 +2813,8 @@ inherit (pkgs.xorg) libXrender;};
         ({ mkDerivation, base, mmorph, stdenv, transformers }:
          mkDerivation {
            pname = "alternators";
-           version = "0.1.1.1";
-           sha256 = "9650d4126bfc2548e20e1ac3855b22568e19f7a40a6c0fa92ece3fcc63d03b0e";
+           version = "0.1.2.0";
+           sha256 = "afe401a4a5ccef58a503f31fd9cf0fdc9618333772e9a80fb5a2696b22f422a6";
            libraryHaskellDepends = [ base mmorph transformers ];
            doHaddock = false;
            doCheck = false;
@@ -4128,14 +4129,31 @@ inherit (pkgs.xorg) libXrender;};
         ({ mkDerivation, ansi-terminal, base, stdenv }:
          mkDerivation {
            pname = "ansigraph";
-           version = "0.3.0.4";
-           sha256 = "294e6bd58c843d04f963bc23034653ac0ffb06e57d6958c827ec814554a9d13f";
+           version = "0.3.0.5";
+           sha256 = "2e8dcf6b182c0b0608f515582b780b7b9cf73a63ec8d1f4bf9ce4b3063397a0e";
            libraryHaskellDepends = [ ansi-terminal base ];
            doHaddock = false;
            doCheck = false;
            homepage = "https://github.com/BlackBrane/ansigraph";
            description = "Terminal-based graphing via ANSI and Unicode";
            license = stdenv.lib.licenses.mit;
+         }) {};
+      "apecs" = callPackage
+        ({ mkDerivation, async, base, containers, mtl, stdenv
+         , template-haskell, vector
+         }:
+         mkDerivation {
+           pname = "apecs";
+           version = "0.2.4.7";
+           sha256 = "1ad954536d6ed1c7f576c8bfd7150d9e69e6e1aa6c19dfe0691f21230a061d43";
+           libraryHaskellDepends = [
+             async base containers mtl template-haskell vector
+           ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "https://github.com/jonascarpay/apecs#readme";
+           description = "A fast ECS for game engine programming";
+           license = stdenv.lib.licenses.bsd3;
          }) {};
       "api-field-json-th" = callPackage
         ({ mkDerivation, aeson, base, lens, split, stdenv, template-haskell
@@ -4571,8 +4589,8 @@ inherit (pkgs.xorg) libXrender;};
         ({ mkDerivation, base, ghc-prim, primitive, stdenv }:
          mkDerivation {
            pname = "atomic-primops";
-           version = "0.8.1";
-           sha256 = "8195f152ee84d89db952d5772c39ccddabcf74977c6f85178a10d0e734e80b7f";
+           version = "0.8.1.1";
+           sha256 = "90f579c60f5affffc171ec3a4eaacc048120c0f174063b42f355d63247442172";
            libraryHaskellDepends = [ base ghc-prim primitive ];
            doHaddock = false;
            doCheck = false;
@@ -4646,6 +4664,8 @@ inherit (pkgs.xorg) libXrender;};
            pname = "attoparsec-iso8601";
            version = "1.0.0.0";
            sha256 = "aa6c6d87587383e386cb85e7ffcc4a6317aa8dafb8ba9a104ecac365ce2a858a";
+           revision = "1";
+           editedCabalFile = "06f7pgmmc8456p3hc1y23kz1y127gfczy7s00wz1rls9g2sm2vi4";
            libraryHaskellDepends = [ attoparsec base base-compat text time ];
            doHaddock = false;
            doCheck = false;
@@ -4696,18 +4716,18 @@ inherit (pkgs.xorg) libXrender;};
       "authenticate" = callPackage
         ({ mkDerivation, aeson, attoparsec, base, blaze-builder, bytestring
          , case-insensitive, conduit, containers, http-conduit, http-types
-         , monad-control, network-uri, resourcet, stdenv, tagstream-conduit
-         , text, transformers, unordered-containers, xml-conduit
+         , network-uri, resourcet, stdenv, tagstream-conduit, text
+         , transformers, unordered-containers, xml-conduit
          }:
          mkDerivation {
            pname = "authenticate";
-           version = "1.3.3.2";
-           sha256 = "a65ff7791e646ea847fc6b8369addeecf6d2c3055a0b7ebe1421881103656e30";
+           version = "1.3.4";
+           sha256 = "3fd566dbfdf75d81ad1bebd19facb9f01509ead6e27d9aed802404ecde932fb8";
            libraryHaskellDepends = [
              aeson attoparsec base blaze-builder bytestring case-insensitive
-             conduit containers http-conduit http-types monad-control
-             network-uri resourcet tagstream-conduit text transformers
-             unordered-containers xml-conduit
+             conduit containers http-conduit http-types network-uri resourcet
+             tagstream-conduit text transformers unordered-containers
+             xml-conduit
            ];
            doHaddock = false;
            doCheck = false;
@@ -4773,8 +4793,8 @@ inherit (pkgs.xorg) libXrender;};
         ({ mkDerivation, base, Cabal, directory, filepath, stdenv }:
          mkDerivation {
            pname = "autoexporter";
-           version = "1.1.2";
-           sha256 = "9dcefc3c3c1299c29345c0df43a471fc854c546b78140f81a064adf1fbfdf7d8";
+           version = "1.1.3";
+           sha256 = "d5ec955e0808bdf58f88be06d4f856ecd7415c348201029150c6daefb6586f66";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [ base Cabal directory filepath ];
@@ -5222,17 +5242,17 @@ inherit (pkgs.xorg) libXrender;};
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "bench" = callPackage
-        ({ mkDerivation, base, criterion, optparse-applicative, silently
-         , stdenv, text, turtle
+        ({ mkDerivation, base, criterion, optparse-applicative, process
+         , silently, stdenv, text, turtle
          }:
          mkDerivation {
            pname = "bench";
-           version = "1.0.6";
-           sha256 = "09c37660d68d103553b79336bfe20383d608cdbaedebfbe289e1b87055a4456b";
+           version = "1.0.7";
+           sha256 = "4eb525e06c3ac6acc0a81fb3c1c4558f74bc9ce1d50806a651e9d9d2a3a6c9d6";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
-             base criterion optparse-applicative silently text turtle
+             base criterion optparse-applicative process silently text turtle
            ];
            doHaddock = false;
            doCheck = false;
@@ -5491,6 +5511,20 @@ inherit (pkgs.xorg) libXrender;};
            description = "Binary and exponential searches";
            license = stdenv.lib.licenses.bsd3;
          }) {};
+      "binary-shared" = callPackage
+        ({ mkDerivation, base, binary, bytestring, containers, mtl, stdenv
+         }:
+         mkDerivation {
+           pname = "binary-shared";
+           version = "0.8.3";
+           sha256 = "830116505018fc43de09867bea9039b0bfa29e77564efa8c3f3b708933c098b2";
+           libraryHaskellDepends = [ base binary bytestring containers mtl ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "http://www.leksah.org";
+           description = "Sharing for the binary package";
+           license = "GPL";
+         }) {};
       "binary-tagged" = callPackage
         ({ mkDerivation, aeson, array, base, base16-bytestring, binary
          , bytestring, containers, generics-sop, hashable, nats, scientific
@@ -5533,8 +5567,8 @@ inherit (pkgs.xorg) libXrender;};
         ({ mkDerivation, base, stdenv }:
          mkDerivation {
            pname = "bindings-DSL";
-           version = "1.0.23";
-           sha256 = "eb6c76448eeb2a9a17135b08eec0dd09e1917a9f6ab702cea0b2070bd19c10e7";
+           version = "1.0.24";
+           sha256 = "234d8f51dece232e4926943c11427e621757c856be0f27a0a104e7dc71f9c80e";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -6094,8 +6128,8 @@ inherit (pkgs) mesa;};
            pname = "boltzmann-samplers";
            version = "0.1.0.0";
            sha256 = "5707065a83cb30223ffedbd740ac07d3d879bb0895ba7666d23d659e3b69883f";
-           revision = "1";
-           editedCabalFile = "00va7bagszricicai4jckyka8azgw6gly9ps5kabnsyv5znylfr0";
+           revision = "2";
+           editedCabalFile = "0mmjxyy9pxrrxdrpkl06c2dk980b4z6pvkg5zj3fl56avg3l4q26";
            libraryHaskellDepends = [
              ad base containers hashable hmatrix ieee754 MonadRandom mtl
              QuickCheck transformers unordered-containers vector
@@ -6295,6 +6329,8 @@ inherit (pkgs) mesa;};
            pname = "brittany";
            version = "0.10.0.0";
            sha256 = "219f804a4ebfe3366c0c578478003384d169d3e1e74eee54257722aa22a1a6ba";
+           revision = "1";
+           editedCabalFile = "1mq1hgakxwzk4k4d8gwfbngprcprjagnvkvq389z1m1vda3w80i8";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -6437,6 +6473,8 @@ inherit (pkgs) mesa;};
            pname = "butcher";
            version = "1.3.0.0";
            sha256 = "cf4e3b14a147201f7878b70e857c9df1abe62c5eb03a9d3cf65d5207ad7a056d";
+           revision = "1";
+           editedCabalFile = "1zw355fg08p90xv3f1qcray0vz68h4sab0q2zfb3hk3j8mpplgvp";
            libraryHaskellDepends = [
              base bifunctors containers deque extra free microlens microlens-th
              mtl multistate pretty transformers unsafe void
@@ -6575,8 +6613,8 @@ inherit (pkgs) mesa;};
         ({ mkDerivation, base, bytestring, stdenv }:
          mkDerivation {
            pname = "bytestring-handle";
-           version = "0.1.0.5";
-           sha256 = "a2c426f35ba32822e45bcc2e6d4945bbb2ee10b8540bb0965ab6f3304325bb83";
+           version = "0.1.0.6";
+           sha256 = "fe681cdf7e2238389b6d2090e264b10d0e5085658c89e7ffc870c7a0a43ac1a1";
            libraryHaskellDepends = [ base bytestring ];
            doHaddock = false;
            doCheck = false;
@@ -6654,6 +6692,8 @@ inherit (pkgs) mesa;};
            pname = "bytestring-trie";
            version = "0.2.4.1";
            sha256 = "2fe4feb526a03d32aaf673506623b3af4ce3fee126f745a8852c5fd676a61363";
+           revision = "1";
+           editedCabalFile = "0f56pb1k1va7bs9rpn0b8hclxhn5pcjln857k50myhyzrwz8qg7r";
            libraryHaskellDepends = [ base binary bytestring ];
            doHaddock = false;
            doCheck = false;
@@ -6727,8 +6767,8 @@ inherit (pkgs) mesa;};
         ({ mkDerivation, base, Cabal, directory, filepath, stdenv }:
          mkDerivation {
            pname = "cabal-doctest";
-           version = "1.0.3";
-           sha256 = "4c4747b954615812fb5af1459c5d7639623b2f01b2e0a19a4481845f78edd8e3";
+           version = "1.0.4";
+           sha256 = "6de8b655ca7168e27e4204923e56b3ed16517814072a9d30f3b2a43babe24a0f";
            libraryHaskellDepends = [ base Cabal directory filepath ];
            doHaddock = false;
            doCheck = false;
@@ -6755,14 +6795,19 @@ inherit (pkgs) mesa;};
          }) {};
       "cabal-helper" = callPackage
         ({ mkDerivation, base, bytestring, Cabal, cabal-install, containers
-         , directory, exceptions, filepath, ghc-prim, mtl, process
+         , directory, exceptions, fetchgit, filepath, ghc-prim, mtl, process
          , semigroupoids, stdenv, template-haskell, temporary, transformers
          , unix, unix-compat, utf8-string
          }:
          mkDerivation {
            pname = "cabal-helper";
            version = "0.8.0.2";
-           sha256 = "a6d62da08fd5c81b5d337fbb988c972583f499988aa27177911818f305f61a7a";
+           src = fetchgit {
+             url = "https://github.com/haskell/haskell-ide-engine.git";
+             sha256 = "1xhrqqlnwa165v4xbk47n7pw129mgx5p2l2si5dag9sgiydb34d9";
+             rev = "0aa338d072c603b91c1ddff4805e4b0eb9440de4";
+           };
+           postUnpack = "sourceRoot+=/./submodules/cabal-helper; echo source root reset to $sourceRoot";
            isLibrary = true;
            isExecutable = true;
            setupHaskellDepends = [ base Cabal directory filepath ];
@@ -6871,8 +6916,8 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "cache";
-           version = "0.1.0.0";
-           sha256 = "149ee40a6452297c61bfba2aa2ee9d7c18cf1a3d51f59cf1a8765d6dddb0fbd0";
+           version = "0.1.0.1";
+           sha256 = "0d0713104e109e788a338cbc1fd4c36c19fcb1cf0334553e80ef41e768d2672f";
            libraryHaskellDepends = [
              base clock hashable stm transformers unordered-containers
            ];
@@ -6911,8 +6956,8 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "cairo";
-           version = "0.13.4.1";
-           sha256 = "02e8849c8e6aabdc4e990f8becaf71565beb2be0f5c62e60661e476fc70e2f12";
+           version = "0.13.4.2";
+           sha256 = "0fe675cda4a00ffeee4cecdbf858b9634433ab9a2bb9f021ff4ee6198f19a36a";
            enableSeparateDataOutput = true;
            setupHaskellDepends = [ base Cabal gtk2hs-buildtools ];
            libraryHaskellDepends = [
@@ -7130,6 +7175,8 @@ inherit (pkgs) mesa;};
            pname = "cereal";
            version = "0.5.4.0";
            sha256 = "daca6c5aeff21ca233bebe006c158b0e4421b239c722768b568fca9b32cafee7";
+           revision = "1";
+           editedCabalFile = "1i791xd80l9rmhrs3x79brpjfy30jw5l70ys94vh63nwl47qpyjc";
            libraryHaskellDepends = [
              array base bytestring containers ghc-prim
            ];
@@ -7373,8 +7420,8 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "chell";
-           version = "0.4.0.1";
-           sha256 = "5f0abd31f4b00483e4667090c89828eda6a1c6ba5d77ecec418ad0fe972a6951";
+           version = "0.4.0.2";
+           sha256 = "490e9f5579d18d8fc732a70d87e6af800ec2d9d43745023143ac2e8b937f3682";
            libraryHaskellDepends = [
              ansi-terminal base bytestring options patience random
              template-haskell text transformers
@@ -8052,8 +8099,8 @@ inherit (pkgs) mesa;};
         ({ mkDerivation, base, stdenv }:
          mkDerivation {
            pname = "colour";
-           version = "2.3.3";
-           sha256 = "8d15a63494f8e2a06fe6dc38baee8e948adfae0e93749b9e3ce0fd8ece09b6e2";
+           version = "2.3.4";
+           sha256 = "0f439f00b322ce3d551f28a4dd1520aa2c91d699de4cdc6d485b9b04be0dc5eb";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [ base ];
            doHaddock = false;
@@ -8326,8 +8373,8 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "conduit-combinators";
-           version = "1.1.1";
-           sha256 = "a022e80d54d6cae017ae69e04b44fd6f57f8bac6b889e574dc09d30170ac0918";
+           version = "1.1.2";
+           sha256 = "840baed33ca32b5197817d6db1e70c4fb53eba01f86bd11c3b358cd8e08d6138";
            libraryHaskellDepends = [
              base base16-bytestring base64-bytestring bytestring chunked-data
              conduit conduit-extra filepath monad-control mono-traversable
@@ -8336,7 +8383,7 @@ inherit (pkgs) mesa;};
            ];
            doHaddock = false;
            doCheck = false;
-           homepage = "https://github.com/snoyberg/mono-traversable";
+           homepage = "https://github.com/snoyberg/mono-traversable#readme";
            description = "Commonly used conduit functions, for both chunked and unchunked data";
            license = stdenv.lib.licenses.mit;
          }) {};
@@ -8399,10 +8446,10 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "conduit-parse";
-           version = "0.1.2.1";
-           sha256 = "8dbb8252f535b1782f493030bf3f6ca5eb50668bf039a7e55d854537deac8379";
+           version = "0.1.2.2";
+           sha256 = "296bfb9bb3b20771fd4bc0d3e5cdb9bb27bc1050cef45a6347e8b196ed54dca7";
            revision = "1";
-           editedCabalFile = "0hajyzvv8s9mwfr3frxb2ayc9rz3qc43fzag99az138fwbw1w3nr";
+           editedCabalFile = "0mqgdv5n83i16i4y5ifswi46058cpdkb026arbg2js46kjymv5z2";
            libraryHaskellDepends = [
              base conduit conduit-combinators dlist mtl parsers safe
              safe-exceptions text transformers
@@ -8604,6 +8651,8 @@ inherit (pkgs) mesa;};
            pname = "contravariant";
            version = "1.4";
            sha256 = "e1666df1373ed784baa7d1e8e963bbc2d1f3c391578ac550ae74e7399173ee84";
+           revision = "1";
+           editedCabalFile = "0pki1z2aqqgb126wdia6fcsr2ccslvyxxs6s1fc4dxvg6qskpj9d";
            libraryHaskellDepends = [
              base semigroups StateVar transformers transformers-compat void
            ];
@@ -8614,15 +8663,17 @@ inherit (pkgs) mesa;};
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "contravariant-extras" = callPackage
-        ({ mkDerivation, base-prelude, contravariant, stdenv
+        ({ mkDerivation, base, base-prelude, contravariant, stdenv
          , template-haskell, tuple-th
          }:
          mkDerivation {
            pname = "contravariant-extras";
            version = "0.3.3.1";
            sha256 = "f35d9df4d1c0fa767afca6500c6ab598f052128abc513259930ef5b6bc7c79d5";
+           revision = "1";
+           editedCabalFile = "0i7gwns134vbi11xja0sv5vqnc4kgd8zzaqyynd3m0rys0waqrik";
            libraryHaskellDepends = [
-             base-prelude contravariant template-haskell tuple-th
+             base base-prelude contravariant template-haskell tuple-th
            ];
            doHaddock = false;
            doCheck = false;
@@ -9003,10 +9054,10 @@ inherit (pkgs) mesa;};
         ({ mkDerivation, base, containers, MissingH, mtl, split, stdenv }:
          mkDerivation {
            pname = "crypto-enigma";
-           version = "0.0.2.9";
-           sha256 = "3fbde8ed0cd6dcf799a48ecc88e57185604c4dfad158b585a8ba11aff12bcca2";
+           version = "0.0.2.10";
+           sha256 = "e60a405a382c9fb0d15774457ced1569809af267e5f970bba314ea340f57ebb0";
            revision = "1";
-           editedCabalFile = "1hbcnj3w5z7cmlrmfih7mv27n75bpcpbiq66wsfgrrvaiycrb58n";
+           editedCabalFile = "0ijaqjhrv772qnjk3i5lv4yrj3cdz15jkrd3v954x281gixm9j1x";
            libraryHaskellDepends = [ base containers MissingH mtl split ];
            doHaddock = false;
            doCheck = false;
@@ -9873,14 +9924,14 @@ inherit (pkgs) mesa;};
          }) {};
       "data-serializer" = callPackage
         ({ mkDerivation, base, binary, bytestring, cereal, data-endian
-         , parsers, semigroups, stdenv
+         , parsers, semigroups, split, stdenv
          }:
          mkDerivation {
            pname = "data-serializer";
-           version = "0.3";
-           sha256 = "c8befa7acf0293b0a367bf8100d19e8cf1ad4b4b48358394daa578103a505e2e";
+           version = "0.3.2";
+           sha256 = "d41023a0a507dd2fd1517c1c2c6aad448373652af5445454ea9899c7f124aa14";
            libraryHaskellDepends = [
-             base binary bytestring cereal data-endian parsers semigroups
+             base binary bytestring cereal data-endian parsers semigroups split
            ];
            doHaddock = false;
            doCheck = false;
@@ -10327,10 +10378,10 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "diagrams-lib";
-           version = "1.4.1.2";
-           sha256 = "4b6e8805decaef85d355d620311595b16fb702df3885060db19bc9b425652670";
-           revision = "4";
-           editedCabalFile = "0wlb4ng803rhx82msl49b39im4cw8naik0pcyyybpphyqbxxs6dd";
+           version = "1.4.2";
+           sha256 = "e9d41742ed3a92b9dff847c3936746e5a95cc4e187b7e4c35c3e3068c842afe5";
+           revision = "1";
+           editedCabalFile = "0vz16br2gn4agi35k92qw84cja2dqj63g7q3ak64jhc8r99bd4a1";
            libraryHaskellDepends = [
              active adjunctions array base bytestring cereal colour containers
              data-default-class diagrams-core diagrams-solve directory
@@ -10397,6 +10448,8 @@ inherit (pkgs) mesa;};
            pname = "diagrams-solve";
            version = "0.1.1";
            sha256 = "a41f5f410b10f162b1e5c07bd4ca3305544870ff1314ae4f5824c83a31644f9d";
+           revision = "1";
+           editedCabalFile = "1aabxq020ycmwynm96dvqh9xbvcsw7s4593kca35i4zl2kzg14bb";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -10840,8 +10893,8 @@ inherit (pkgs) mesa;};
            pname = "dlist-nonempty";
            version = "0.1.1";
            sha256 = "40e8a64c979ca07b4f67a38878d1d13c1127fe2d1ad6b2b4daff0ee2dbd54b33";
-           revision = "1";
-           editedCabalFile = "0dcqfyp38f792nzsv4977dcv4zr4xdrg780lz6bpf2hn7ikdglz9";
+           revision = "2";
+           editedCabalFile = "1968b6i0azv0bi3x6cw85ga89md1dh1wdmly3ivvvyb6i9mgwrn6";
            libraryHaskellDepends = [
              base base-compat deepseq dlist semigroupoids
            ];
@@ -11177,15 +11230,14 @@ inherit (pkgs) mesa;};
            license = stdenv.lib.licenses.mit;
          }) {};
       "dsp" = callPackage
-        ({ mkDerivation, array, base, random, stdenv }:
+        ({ mkDerivation, array, base, containers, random, stdenv }:
          mkDerivation {
            pname = "dsp";
-           version = "0.2.3.1";
-           sha256 = "d5c21c9bf0a7c40b4a7f1bfed04250251a770d3a3c1935ba0b358bc43191dda2";
+           version = "0.2.4";
+           sha256 = "fee4dff51d372ae9fd7ceaa0b885b1dfdf396ebddbc56076a529ecdf95589b2f";
            isLibrary = true;
            isExecutable = true;
-           libraryHaskellDepends = [ array base random ];
-           executableHaskellDepends = [ array base ];
+           libraryHaskellDepends = [ array base containers random ];
            doHaddock = false;
            doCheck = false;
            homepage = "http://www.haskell.org/haskellwiki/DSP";
@@ -11722,8 +11774,8 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "engine-io-wai";
-           version = "1.0.6";
-           sha256 = "9db83e3a8e5dc42089f7078b6cea87746bd96872516d688292bcf92719de104a";
+           version = "1.0.7";
+           sha256 = "6a9c2b74a4de612f4916c4be5e3bc49c5185004ab04bfedd134c8c4f523f4a8d";
            libraryHaskellDepends = [
              attoparsec base bytestring either engine-io http-types mtl text
              transformers transformers-compat unordered-containers wai
@@ -11732,6 +11784,7 @@ inherit (pkgs) mesa;};
            doHaddock = false;
            doCheck = false;
            homepage = "http://github.com/ocharles/engine.io";
+           description = "An @engine-io@ @ServerAPI@ that is compatible with @Wai@";
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "entropy" = callPackage
@@ -12028,6 +12081,8 @@ inherit (pkgs) mesa;};
            pname = "ether";
            version = "0.5.1.0";
            sha256 = "36980c9598c5e8e804695da3b966416a2221296022b39be437ec35263ea10085";
+           revision = "1";
+           editedCabalFile = "01q86w79xswdkq08m375xwfqjgix6bzbc4lpxz4phqvzf38lc8i5";
            libraryHaskellDepends = [
              base exceptions mmorph monad-control mtl reflection tagged
              template-haskell transformers transformers-base transformers-lift
@@ -12445,8 +12500,8 @@ inherit (pkgs) mesa;};
          }:
          mkDerivation {
            pname = "extensible";
-           version = "0.4.6";
-           sha256 = "5b14c04c84262e6ddaddfcf287faa9225e1f1debc42eadb3c56420864510114e";
+           version = "0.4.7";
+           sha256 = "fbcd43a37a359c547c48afaa2e0621f19c80e2b6615a90719eb43be87bac1d28";
            libraryHaskellDepends = [
              base comonad constraints deepseq ghc-prim hashable monad-skeleton
              mtl primitive profunctors QuickCheck semigroups StateVar tagged
@@ -12948,8 +13003,8 @@ inherit (pkgs) mesa;};
         ({ mkDerivation, base, stdenv }:
          mkDerivation {
            pname = "fingertree";
-           version = "0.1.2.1";
-           sha256 = "a5bbd45459df4e7a4e8225b9929f942f2cae08739778c4439737a60e17856c0f";
+           version = "0.1.3.1";
+           sha256 = "974c35da68a4f2c3bf6fe7514b8057ff34c2894999071ae7d6a735db64fe9823";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -12972,8 +13027,8 @@ inherit (pkgs) mesa;};
         ({ mkDerivation, base, deepseq, stdenv }:
          mkDerivation {
            pname = "finite-typelits";
-           version = "0.1.2.0";
-           sha256 = "3c52230d439724357d0c2b817223bb43d3a417e241b99f3ef58ab9dd838b1527";
+           version = "0.1.3.0";
+           sha256 = "db733336de7ba5a2650f33f0b6a82dfe6699124f673b4506ffedaa4b6513489d";
            libraryHaskellDepends = [ base deepseq ];
            doHaddock = false;
            doCheck = false;
@@ -13047,8 +13102,8 @@ inherit (pkgs) mesa;};
            pname = "flac";
            version = "0.1.2";
            sha256 = "5692b3dfc561cbeed25b1cf9280705f58eadd8c400aa2e6a725fd5562042ac29";
-           revision = "2";
-           editedCabalFile = "0pn5mw1n152i106x60gz05bnpfhn50ll005v4ihvawq5faq3h44l";
+           revision = "3";
+           editedCabalFile = "09xml5mv63q0wzw09s0ssjdzgnq041gr6gjhk63dr252rydnn4zh";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [
              base bytestring containers data-default-class directory exceptions
@@ -13067,6 +13122,8 @@ inherit (pkgs) mesa;};
            pname = "flac-picture";
            version = "0.1.1";
            sha256 = "3c1cf80c48521370ce6351d4b544c14891442bfe47c65e5bf436fe58f6fec1ce";
+           revision = "1";
+           editedCabalFile = "02vdh61nzig0yrv6ja6fjlgfcznj5k4iqh3i5f9g5p078ycqb17w";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [ base bytestring flac JuicyPixels ];
            doHaddock = false;
@@ -13168,8 +13225,8 @@ inherit (pkgs) mesa;};
         ({ mkDerivation, base, stdenv }:
          mkDerivation {
            pname = "flow";
-           version = "1.0.9";
-           sha256 = "35f4af7bc0bc1412c34975140c6450fcf1feedb8f79d9253805c274df09214e7";
+           version = "1.0.10";
+           sha256 = "d28543eddbeb9d05e33fa523df0a2346685adf284e9a2108b6059150cb2117cd";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -13285,8 +13342,8 @@ inherit (pkgs) mesa;};
            pname = "foldl";
            version = "1.2.5";
            sha256 = "aa2d5c3cfb8641163dcdd489e9e0fe481301e94c0e3940fc9e234f8e1b00ec4b";
-           revision = "1";
-           editedCabalFile = "02lk5838594mi15bylz2kpcm1c4akbsswj73i7k8xw4ns66iaq04";
+           revision = "2";
+           editedCabalFile = "09900w3a2sr2yvkijn383h82k71fjk5cjq0l2ld0xpm08466fb3r";
            libraryHaskellDepends = [
              base bytestring comonad containers contravariant hashable
              mwc-random primitive profunctors text transformers
@@ -13553,8 +13610,8 @@ inherit (pkgs) libfreenect;};
          }:
          mkDerivation {
            pname = "frisby";
-           version = "0.2.1";
-           sha256 = "64c578ff3fed3e0698998bc97302a34355cfac1a8f8d294a5009ef1d758b8ef6";
+           version = "0.2.2";
+           sha256 = "c1b318dbf54d56e1012955cc47a1633af5fd77facc128c725353718c0663b6d5";
            libraryHaskellDepends = [ array base containers mtl semigroups ];
            doHaddock = false;
            doCheck = false;
@@ -13596,6 +13653,8 @@ inherit (pkgs) libfreenect;};
            pname = "fsnotify";
            version = "0.2.1.1";
            sha256 = "175a75962ad07c30c031fa8931f8d3e32abc06a96676e73e65cb7207e9d2dc90";
+           revision = "1";
+           editedCabalFile = "0kag32lqkjmv03bycf6ip2vd6vzpcpq4iqs6ivyjh93v40252xxp";
            libraryHaskellDepends = [
              async base containers directory filepath hinotify text time
              unix-compat
@@ -13750,8 +13809,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "generic-aeson";
            version = "0.2.0.9";
            sha256 = "34c13f91ffa72a1f6d7f43b84fdd19b20db547045eb6164a4119f9a95dcd84cb";
-           revision = "2";
-           editedCabalFile = "05hn4bjqrx1fimlwwbv9358806m4q1dkbfw886lpkkhbflr7jmn9";
+           revision = "3";
+           editedCabalFile = "0dlxl7p1nf8d4yh6r5yfdnrsn4wb5wl7bj9ymln744b498frlfln";
            libraryHaskellDepends = [
              aeson attoparsec base generic-deriving mtl tagged text
              unordered-containers vector
@@ -13799,8 +13858,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "generic-xmlpickler";
            version = "0.1.0.5";
            sha256 = "d51760f5650051eebe561f2b18670657e8398014fa2a623c0e0169bfeca336af";
-           revision = "6";
-           editedCabalFile = "0jc2rnh8kyzay8ny59ahqb9q6vmp7si4aps1a42la79735078x51";
+           revision = "7";
+           editedCabalFile = "0v4sqm0m8vr2i6hinx0mpax3mz73mvf21bdbga0vdgx7dac2nvkb";
            libraryHaskellDepends = [ base generic-deriving hxt text ];
            doHaddock = false;
            doCheck = false;
@@ -13948,10 +14007,11 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "ghc-mod";
            version = "5.9.0.0";
            src = fetchgit {
-             url = "https://github.com/alanz/ghc-mod.git";
-             sha256 = "0nl3f6w520fq4vhlzbmw3phdpl927xrzyn36sahmaiqx0yzns7y8";
-             rev = "47e200a728a575f407ee6f9893d9a1e77b1b5325";
+             url = "https://github.com/haskell/haskell-ide-engine.git";
+             sha256 = "1xhrqqlnwa165v4xbk47n7pw129mgx5p2l2si5dag9sgiydb34d9";
+             rev = "0aa338d072c603b91c1ddff4805e4b0eb9440de4";
            };
+           postUnpack = "sourceRoot+=/./submodules/ghc-mod/.; echo source root reset to $sourceRoot";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -13991,11 +14051,11 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "ghc-mod-core";
            version = "5.9.0.0";
            src = fetchgit {
-             url = "https://github.com/alanz/ghc-mod.git";
-             sha256 = "0nl3f6w520fq4vhlzbmw3phdpl927xrzyn36sahmaiqx0yzns7y8";
-             rev = "47e200a728a575f407ee6f9893d9a1e77b1b5325";
+             url = "https://github.com/haskell/haskell-ide-engine.git";
+             sha256 = "1xhrqqlnwa165v4xbk47n7pw129mgx5p2l2si5dag9sgiydb34d9";
+             rev = "0aa338d072c603b91c1ddff4805e4b0eb9440de4";
            };
-           postUnpack = "sourceRoot+=/core; echo source root reset to $sourceRoot";
+           postUnpack = "sourceRoot+=/./submodules/ghc-mod/core; echo source root reset to $sourceRoot";
            setupHaskellDepends = [
              base Cabal containers directory filepath process template-haskell
              transformers
@@ -14034,8 +14094,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
          }:
          mkDerivation {
            pname = "ghc-prof";
-           version = "1.4.0.3";
-           sha256 = "0d3eb061db6355d18fe593e46effd7cb6f4251a96a273859de497e9642cf8a7e";
+           version = "1.4.0.4";
+           sha256 = "f652305cd663fccb578178dbc46b35764a5c556dcb1131427f49c6655534ef0c";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -14318,8 +14378,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
          }:
          mkDerivation {
            pname = "gi-glib";
-           version = "2.0.14";
-           sha256 = "1daba33fb131e32f95cfafe50a5064a78f0f85d4b061631c489ec9756fce7525";
+           version = "2.0.15";
+           sha256 = "9f19b508035445676d9ba86bc001d228b38e79a063f8c1d26325962af8c6d3bd";
            setupHaskellDepends = [ base Cabal haskell-gi ];
            libraryHaskellDepends = [
              base bytestring containers haskell-gi haskell-gi-base
@@ -14361,8 +14421,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
          }:
          mkDerivation {
            pname = "gi-gtk";
-           version = "3.0.17";
-           sha256 = "83e7c1547dbcb731e3cd40ebe591b4dfd4e45283591a7dbd315a2f3a2cdcf4e6";
+           version = "3.0.18";
+           sha256 = "813a8c730ac1bd152eea4f2472f904fddaf4afb8b102dfe6bee641a45623e8ba";
            setupHaskellDepends = [ base Cabal haskell-gi ];
            libraryHaskellDepends = [
              base bytestring containers gi-atk gi-cairo gi-gdk gi-gdkpixbuf
@@ -14376,6 +14436,50 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            description = "Gtk bindings";
            license = stdenv.lib.licenses.lgpl21;
          }) {gtk3 = pkgs.gnome3.gtk;};
+      "gi-gtk-hs" = callPackage
+        ({ mkDerivation, base, base-compat, containers, gi-gdk
+         , gi-gdkpixbuf, gi-glib, gi-gobject, gi-gtk, haskell-gi-base, mtl
+         , stdenv, text, transformers
+         }:
+         mkDerivation {
+           pname = "gi-gtk-hs";
+           version = "0.3.5.0";
+           sha256 = "3b4247bf1bfe001be7ff5f3fb03c8ec18bbbbe98347cd757cc14a5c126867a83";
+           revision = "2";
+           editedCabalFile = "0cv2ca8skkz4gfnw7xxy9ppcxcr9d97rnxr1jj5ii7nki9njb693";
+           libraryHaskellDepends = [
+             base base-compat containers gi-gdk gi-gdkpixbuf gi-glib gi-gobject
+             gi-gtk haskell-gi-base mtl text transformers
+           ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "https://github.com/haskell-gi/gi-gtk-hs";
+           description = "A wrapper for gi-gtk, adding a few more idiomatic API parts on top";
+           license = stdenv.lib.licenses.lgpl21;
+         }) {};
+      "gi-gtksource" = callPackage
+        ({ mkDerivation, base, bytestring, Cabal, containers, gi-atk
+         , gi-cairo, gi-gdk, gi-gdkpixbuf, gi-gio, gi-glib, gi-gobject
+         , gi-gtk, gi-pango, gtksourceview3, haskell-gi, haskell-gi-base
+         , haskell-gi-overloading, stdenv, text, transformers
+         }:
+         mkDerivation {
+           pname = "gi-gtksource";
+           version = "3.0.15";
+           sha256 = "cd89e9018e033eb839ac98271f9bed9e6ffad94ac3ff554500e32d5e0eec6e27";
+           setupHaskellDepends = [ base Cabal haskell-gi ];
+           libraryHaskellDepends = [
+             base bytestring containers gi-atk gi-cairo gi-gdk gi-gdkpixbuf
+             gi-gio gi-glib gi-gobject gi-gtk gi-pango haskell-gi
+             haskell-gi-base haskell-gi-overloading text transformers
+           ];
+           libraryPkgconfigDepends = [ gtksourceview3 ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "https://github.com/haskell-gi/haskell-gi";
+           description = "GtkSource bindings";
+           license = stdenv.lib.licenses.lgpl21;
+         }) {gtksourceview3 = pkgs.gnome3.gtksourceview;};
       "gi-javascriptcore" = callPackage
         ({ mkDerivation, base, bytestring, Cabal, containers, haskell-gi
          , haskell-gi-base, haskell-gi-overloading, stdenv, text
@@ -14500,8 +14604,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
          }:
          mkDerivation {
            pname = "gio";
-           version = "0.13.3.1";
-           sha256 = "ac63f42321800731b9dc1f753f27ee877c04fdf7bcbcab0e2c57348a4739d827";
+           version = "0.13.4.0";
+           sha256 = "99ba05bc936997df49ff172237c4a2b6cb6057c9bfb0cbda8392b680daf953ca";
            enableSeparateDataOutput = true;
            setupHaskellDepends = [ base Cabal gtk2hs-buildtools ];
            libraryHaskellDepends = [
@@ -14539,17 +14643,17 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
          }) {};
       "git" = callPackage
         ({ mkDerivation, base, byteable, bytestring, containers, cryptonite
-         , hourglass, memory, mtl, patience, random, stdenv, system-fileio
+         , hourglass, memory, patience, random, stdenv, system-fileio
          , system-filepath, unix-compat, utf8-string, vector, zlib
          , zlib-bindings
          }:
          mkDerivation {
            pname = "git";
-           version = "0.2.0";
-           sha256 = "d773dcfdd34b2b4ca34a1e84fac7c80f44c0ea0f89378ab3d161683c8acd8ea8";
+           version = "0.2.1";
+           sha256 = "5fb7d86687262fc92faedfdb51fd99d02ef3d4bd09bc151dc2e0a1b23afd1048";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [
-             base byteable bytestring containers cryptonite hourglass memory mtl
+             base byteable bytestring containers cryptonite hourglass memory
              patience random system-fileio system-filepath unix-compat
              utf8-string vector zlib zlib-bindings
            ];
@@ -14839,6 +14943,8 @@ inherit (pkgs) which;};
            pname = "gl";
            version = "0.8.0";
            sha256 = "aa4d2838157c86da920bda651458a4266fccc7c291ea93a69558ab02540e1439";
+           revision = "1";
+           editedCabalFile = "17m5vagiq1v7zg6409f56qqy28jd0xp13yk44s661rcwj0f4pd14";
            setupHaskellDepends = [
              base Cabal containers directory filepath hxt transformers
            ];
@@ -14857,8 +14963,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "glabrous";
-           version = "0.3.3";
-           sha256 = "b6a948c534d5c27ff9517deced01c009ea03e980cabb4285a96d27e1ba6ae181";
+           version = "0.3.4";
+           sha256 = "82e0efbd130a686c97897e78f33272557a22ae5742790bf2325abc0268a7bc01";
            libraryHaskellDepends = [
              aeson aeson-pretty attoparsec base bytestring cereal cereal-text
              either text unordered-containers
@@ -16628,8 +16734,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "groundhog-th";
-           version = "0.8.0.1";
-           sha256 = "3a2c31f38a290a0147817e6f7cf35d9e2e62ad31302382beb7dfe4a3b0117303";
+           version = "0.8.0.2";
+           sha256 = "26958d982f2dd17aeacdf22386fd87bf81a5acdc93b28e80b93beaba6c6d3d8f";
            libraryHaskellDepends = [
              aeson base bytestring containers groundhog template-haskell text
              time unordered-containers yaml
@@ -16663,8 +16769,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, containers, deepseq, pointed, stdenv }:
          mkDerivation {
            pname = "grouped-list";
-           version = "0.2.1.3";
-           sha256 = "be65f09b6bd6da76699c4de99532ac6b5a67d2c20cc4bdd5d273e0fa9295f5bd";
+           version = "0.2.1.4";
+           sha256 = "309d8b5409ef785bd8720658e4fecc233c65f56002741f1e9b5d0f7f584d369c";
            libraryHaskellDepends = [ base containers deepseq pointed ];
            doHaddock = false;
            doCheck = false;
@@ -16689,8 +16795,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, stdenv }:
          mkDerivation {
            pname = "groups";
-           version = "0.4.0.0";
-           sha256 = "d328395164033e310148d57d5be86fc6cc4dbc97b4296b91f235b213cc80e8ce";
+           version = "0.4.1.0";
+           sha256 = "dd4588b71dfff42b9a30cb40304912742b95db964b20f51951aff0eee7f3f33d";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -16723,10 +16829,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "gtk2hs-buildtools";
-           version = "0.13.3.0";
-           sha256 = "5b2bc0566b6dd9d1c551a01ccd5a77db20d6837e47362a415c9cc4bbc330e5cf";
-           revision = "1";
-           editedCabalFile = "0nbfvza67z6wi7lgpa8zdr7smqzh5xjvhjd7a4iigls8jj74h78s";
+           version = "0.13.3.1";
+           sha256 = "220f2f4aa1e01b8585fddf35bfc9f3a9dd300f2308d3c2b800c621cdd2ce7154";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -16749,8 +16853,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "gtk3";
-           version = "0.14.7";
-           sha256 = "3aa575fff6e455f4b46e6b7509716452ae479ee23546f12d2c54e5c848bf7f57";
+           version = "0.14.8";
+           sha256 = "7c4621ca2af64f0dbb2dd9fdf353f80d7be6c10ab1ee3b31a77562f8611bb36b";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -16768,6 +16872,49 @@ inherit (pkgs) which;};
            description = "Binding to the Gtk+ 3 graphical user interface library";
            license = stdenv.lib.licenses.lgpl21;
          }) {inherit (pkgs) gtk3;};
+      "gtksourceview3" = callPackage
+        ({ mkDerivation, array, base, Cabal, containers, glib
+         , gtk2hs-buildtools, gtk3, gtksourceview3, mtl, stdenv, text
+         }:
+         mkDerivation {
+           pname = "gtksourceview3";
+           version = "0.13.3.1";
+           sha256 = "9a7e12fda53d532668ee7f830c0aacf43c8a0c9a65f571fa81088a7372383b7b";
+           enableSeparateDataOutput = true;
+           setupHaskellDepends = [ base Cabal gtk2hs-buildtools ];
+           libraryHaskellDepends = [
+             array base containers glib gtk3 mtl text
+           ];
+           libraryPkgconfigDepends = [ gtksourceview3 ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "http://projects.haskell.org/gtk2hs/";
+           description = "Binding to the GtkSourceView library";
+           license = stdenv.lib.licenses.lgpl21;
+         }) {gtksourceview3 = pkgs.gnome3.gtksourceview;};
+      "gym-http-api" = callPackage
+        ({ mkDerivation, aeson, base, exceptions, http-client, servant
+         , servant-client, servant-lucid, stdenv, text, unordered-containers
+         }:
+         mkDerivation {
+           pname = "gym-http-api";
+           version = "0.1.0.0";
+           sha256 = "1708df8beba2df0cd2d4dfd34f1a138a96930f9713bb22415d11c79ff8b5a845";
+           isLibrary = true;
+           isExecutable = true;
+           libraryHaskellDepends = [
+             aeson base servant servant-client servant-lucid text
+             unordered-containers
+           ];
+           executableHaskellDepends = [
+             base exceptions http-client servant-client
+           ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "https://github.com/stites/gym-http-api#readme";
+           description = "REST client to the gym-http-api project";
+           license = stdenv.lib.licenses.mit;
+         }) {};
       "h2c" = callPackage
         ({ mkDerivation, base, bytestring, mtl, resourcet, stdenv }:
          mkDerivation {
@@ -16789,8 +16936,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hPDB";
-           version = "1.2.0.9";
-           sha256 = "444b884c1e9af07ae75784d13c83736bcd94b7d766e2ec11d696e8adef8f8ecd";
+           version = "1.2.0.10";
+           sha256 = "40cd42efbd95a983b97f4bd5a1aae3fe5cfe0ff549439b08f2c68a834a4a4581";
            libraryHaskellDepends = [
              AC-Vector base bytestring containers deepseq directory ghc-prim
              iterable mmap mtl Octree parallel QuickCheck tagged
@@ -16809,8 +16956,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hPDB-examples";
-           version = "1.2.0.7";
-           sha256 = "3330e001829767acfa862897c4df85d5d349e6fd2630f7d7ac7e6f5d4fde981b";
+           version = "1.2.0.8";
+           sha256 = "c661b24bf24a472685d0ac45a6bcd988a34b66d53c568693c939b2918c80ce7f";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
@@ -17125,8 +17272,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hapistrano";
-           version = "0.3.3.0";
-           sha256 = "863010ddb27a2b87259f89c672af64247ad8e900a17537c00124d16ff5f377ea";
+           version = "0.3.5.0";
+           sha256 = "8cd17fa07227e1eefaad66b79f92330279d01a71e8772011e65c95a2b9d69295";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -17345,19 +17492,19 @@ inherit (pkgs) which;};
          }) {};
       "haskeline" = callPackage
         ({ mkDerivation, base, bytestring, containers, directory, filepath
-         , process, stdenv, terminfo, transformers, unix
+         , process, stdenv, stm, terminfo, transformers, unix
          }:
          mkDerivation {
            pname = "haskeline";
-           version = "0.7.4.0";
-           sha256 = "9ad5f556891733171086823ad63fc1e7b6cd9d758ff3f943eadbbdfaead53978";
+           version = "0.7.4.2";
+           sha256 = "5543ec8cd932396360a5c707bf0958b39bb99a559fb4fd80ed366a953c6cb0eb";
            libraryHaskellDepends = [
-             base bytestring containers directory filepath process terminfo
+             base bytestring containers directory filepath process stm terminfo
              transformers unix
            ];
            doHaddock = false;
            doCheck = false;
-           homepage = "http://trac.haskell.org/haskeline";
+           homepage = "https://github.com/judah/haskeline";
            description = "A command-line interface for user input, written in Haskell";
            license = stdenv.lib.licenses.bsd3;
          }) {};
@@ -17393,8 +17540,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "haskell-gi-base";
-           version = "0.20.5";
-           sha256 = "2ad537faaddfe8fb233ea161fdd23ffc166417c78149b2d72aeca98cbed9a4a0";
+           version = "0.20.8";
+           sha256 = "91a82f170b92ed8374e1f7835c50434568702448f21ba32f0c87a15fb2fed3e1";
            libraryHaskellDepends = [ base bytestring containers text ];
            libraryPkgconfigDepends = [ glib ];
            doHaddock = false;
@@ -17430,8 +17577,8 @@ inherit (pkgs) which;};
            version = "0.1.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0vzgk2diy6kqs0zpy813vdynldkv0qiqlmiwiikqnq3rq2bqgi72";
-             rev = "d1053a5e0abac9beb9616bcc7105af883467aca6";
+             sha256 = "1xhrqqlnwa165v4xbk47n7pw129mgx5p2l2si5dag9sgiydb34d9";
+             rev = "0aa338d072c603b91c1ddff4805e4b0eb9440de4";
            };
            isLibrary = true;
            isExecutable = true;
@@ -18148,8 +18295,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hdevtools";
-           version = "0.1.6.0";
-           sha256 = "459666909c58ae8a326446fd97bc256681a746d91fda8314dd0194bf3438e27a";
+           version = "0.1.6.1";
+           sha256 = "e7e46acf4a6567159e431739f4c4103b91eae257394560e4b1aaa8e427393440";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
@@ -18253,10 +18400,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hedgehog";
-           version = "0.5";
-           sha256 = "f3caf8b249012727dc2328b0b595575898f1f2287967748de44fe6caab2bbe09";
-           revision = "1";
-           editedCabalFile = "13079sdirdzch3r199lyxa7xrcq4xpaayxhdvg8v0d27w9z1chln";
+           version = "0.5.1";
+           sha256 = "a7f308db5009c6bd78f83a3767ab437ec8f9135a141a0c6184b97f55086ea33b";
            libraryHaskellDepends = [
              ansi-terminal async base bytestring concurrent-output containers
              directory exceptions lifted-async mmorph monad-control mtl
@@ -18309,8 +18454,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "here";
-           version = "1.2.11";
-           sha256 = "68ca93362c29a6ecb9e742aaa5f633a644ef2e6d07251e36fd02e15be2e7ecca";
+           version = "1.2.12";
+           sha256 = "ac3f7657593a087ffd26018ba3b0b5e4f309dc38ee3e8c883fbf9030ed643c4e";
            libraryHaskellDepends = [
              base haskell-src-meta mtl parsec template-haskell
            ];
@@ -18508,8 +18653,8 @@ inherit (pkgs) which;};
            version = "0.1.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0vzgk2diy6kqs0zpy813vdynldkv0qiqlmiwiikqnq3rq2bqgi72";
-             rev = "d1053a5e0abac9beb9616bcc7105af883467aca6";
+             sha256 = "1xhrqqlnwa165v4xbk47n7pw129mgx5p2l2si5dag9sgiydb34d9";
+             rev = "0aa338d072c603b91c1ddff4805e4b0eb9440de4";
            };
            postUnpack = "sourceRoot+=/hie-plugin-api; echo source root reset to $sourceRoot";
            libraryHaskellDepends = [
@@ -18664,6 +18809,8 @@ inherit (pkgs) which;};
            pname = "hinotify";
            version = "0.3.9";
            sha256 = "f2480e4c08a516831c2221eebc6a9d3242e892932d9315c34cbe92a101c5df99";
+           revision = "1";
+           editedCabalFile = "0df5pak0586626k3ryzg2lb26ys562l3i94jr9vpa0krs8iia209";
            libraryHaskellDepends = [ async base containers directory unix ];
            doHaddock = false;
            doCheck = false;
@@ -18853,30 +19000,6 @@ inherit (pkgs) which;};
            doCheck = false;
            homepage = "http://hledger.org";
            description = "Command-line interface for the hledger accounting tool";
-           license = stdenv.lib.licenses.gpl3;
-         }) {};
-      "hledger-api" = callPackage
-        ({ mkDerivation, aeson, base, bytestring, containers, Decimal
-         , docopt, either, hledger, hledger-lib, microlens
-         , microlens-platform, safe, servant-server, servant-swagger, stdenv
-         , swagger2, text, transformers, wai, wai-extra, warp
-         }:
-         mkDerivation {
-           pname = "hledger-api";
-           version = "1.2";
-           sha256 = "98d3590c8ba7ea11f1d374b6dc0e26642b0d20ce091b83918d42118fd381425d";
-           isLibrary = false;
-           isExecutable = true;
-           enableSeparateDataOutput = true;
-           executableHaskellDepends = [
-             aeson base bytestring containers Decimal docopt either hledger
-             hledger-lib microlens microlens-platform safe servant-server
-             servant-swagger swagger2 text transformers wai wai-extra warp
-           ];
-           doHaddock = false;
-           doCheck = false;
-           homepage = "http://hledger.org";
-           description = "Web API server for the hledger accounting tool";
            license = stdenv.lib.licenses.gpl3;
          }) {};
       "hledger-iadd" = callPackage
@@ -19245,16 +19368,16 @@ inherit (pkgs) which;};
          , conduit-extra, connection, containers, deepseq, directory, extra
          , filepath, haskell-src-exts, http-conduit, http-types, js-flot
          , js-jquery, mmap, network, network-uri, old-locale, process
-         , process-extras, QuickCheck, resourcet, stdenv, tar
-         , template-haskell, text, time, transformers, uniplate, utf8-string
-         , vector, wai, wai-logger, warp, warp-tls, zlib
+         , process-extras, QuickCheck, resourcet, stdenv, storable-tuple
+         , tar, template-haskell, text, time, transformers, uniplate
+         , utf8-string, vector, wai, wai-logger, warp, warp-tls, zlib
          }:
          mkDerivation {
            pname = "hoogle";
-           version = "5.0.13";
-           sha256 = "76a229eb4b6177e8cb5eb8f2c2ec42cb72ec5b224e1792ffb56bd4e7e2fcadf3";
-           revision = "1";
-           editedCabalFile = "1raj8qifcfc521gljgn9b449ycdzw1p3750n7pdwy39l9p5vb89k";
+           version = "5.0.14";
+           sha256 = "e7cfa9ca7496d7a30b476f3502c0dfa38671d4235042bb46806568602e97bbf8";
+           revision = "3";
+           editedCabalFile = "14973295rif9gsyaxfrw7y5p59sxnz4znki3jm3bk73y0b3j1l5d";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -19263,8 +19386,9 @@ inherit (pkgs) which;};
              connection containers deepseq directory extra filepath
              haskell-src-exts http-conduit http-types js-flot js-jquery mmap
              network network-uri old-locale process process-extras QuickCheck
-             resourcet tar template-haskell text time transformers uniplate
-             utf8-string vector wai wai-logger warp warp-tls zlib
+             resourcet storable-tuple tar template-haskell text time
+             transformers uniplate utf8-string vector wai wai-logger warp
+             warp-tls zlib
            ];
            executableHaskellDepends = [ base ];
            doHaddock = false;
@@ -19355,6 +19479,8 @@ inherit (pkgs) which;};
            pname = "hourglass";
            version = "0.2.10";
            sha256 = "d553362d7a6f7df60d8ff99304aaad0995be81f9d302725ebe9441829a0f8d80";
+           revision = "1";
+           editedCabalFile = "13q3v4hvwaqxc85m006avx0wka0y8nigka7z8nqhy6rn39qxjjdj";
            libraryHaskellDepends = [ base deepseq ];
            doHaddock = false;
            doCheck = false;
@@ -19588,8 +19714,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hruby";
-           version = "0.3.4.4";
-           sha256 = "49c6701f293480a28d9a94e8a435676b8238eb023338eebffdbcda2cc63b2921";
+           version = "0.3.5.1";
+           sha256 = "969b829f28d369a3a99960e3890427470459425b3434576e54f8fd3ca13fef3f";
            libraryHaskellDepends = [
              aeson attoparsec base bytestring scientific stm text
              unordered-containers vector
@@ -19667,8 +19793,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, containers, stdenv }:
          mkDerivation {
            pname = "hscolour";
-           version = "1.24.1";
-           sha256 = "e46fe3de8ed6f96e2216b94b7608d01919bc86b15dd8d0ec7e71c0e7e5bf79c8";
+           version = "1.24.2";
+           sha256 = "55fb86bafdcad9613c25910b1cbca4b071c1ddc6365538c3b3d4e350cb30cf22";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -19818,8 +19944,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hsexif";
-           version = "0.6.1.4";
-           sha256 = "5954d4cad5c643ef47f2a565b40c531b806694e95abce7bf4a494d29a9b7e2c6";
+           version = "0.6.1.5";
+           sha256 = "2f12ea1060adb46c9afb74d32b82989b3883968403e21ff125f5cf9da869b06e";
            libraryHaskellDepends = [
              base binary bytestring containers iconv text time
            ];
@@ -20283,10 +20409,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "hsshellscript";
-           version = "3.4.1";
-           sha256 = "6124321260ad53147315005647d0482ff901934ebf6c52ceef1c23cc24f6eb78";
-           revision = "1";
-           editedCabalFile = "1gfz3ipvippjb8lmhi7j7di2pignibj1x662m1b2qhcpyhlqnabp";
+           version = "3.4.5";
+           sha256 = "7dbfd595832e4ecd7d12d8b36ce8a82192d79a764631c98071440a7daa7ec634";
            libraryHaskellDepends = [ base directory parsec random unix ];
            libraryToolDepends = [ c2hs ];
            doHaddock = false;
@@ -20565,8 +20689,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "http-conduit";
-           version = "2.2.3.2";
-           sha256 = "e359c3ef370731e895a5c213e805c6806394f13598647f36dce7be41d4c41eb8";
+           version = "2.2.4";
+           sha256 = "f4a8ffd63238059c044a6ac8dad0ad0b276a5c75499e2313a63e6cf22e1d94f1";
            libraryHaskellDepends = [
              aeson base bytestring conduit conduit-extra exceptions http-client
              http-client-tls http-types lifted-base monad-control mtl resourcet
@@ -20657,10 +20781,10 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "http-streams";
-           version = "0.8.5.3";
-           sha256 = "cadaf4f52af24bf14bc0b0991c1d040e315622301796db30000da5f67b2ee5e3";
+           version = "0.8.5.5";
+           sha256 = "0e422240e61f5837e4736eff3172184678c8f3e403e1e2da10a90bec7c7f5ebc";
            revision = "1";
-           editedCabalFile = "0ki3gv5lhs69hj17ng4asyqaw4wcjjpwqda79az9wkizxyvbc0ay";
+           editedCabalFile = "0mgj62khq2abq53y03qww66k74pxhnid8yiqrlhggj9cjv7m2my5";
            setupHaskellDepends = [ base Cabal ];
            libraryHaskellDepends = [
              aeson attoparsec base base64-bytestring blaze-builder bytestring
@@ -21080,8 +21204,8 @@ inherit (pkgs) which;};
            pname = "hxt-pickle-utils";
            version = "0.1.0.3";
            sha256 = "9ddba19f27d9d8c155012da4dd9598fb318cab862da10f14ee4bc3eb5321a9c5";
-           revision = "2";
-           editedCabalFile = "109jh2iibhnllkwpqpiyfwdqjn3v06ap58fhyzikjdqzz0rzwgh5";
+           revision = "3";
+           editedCabalFile = "0d5fg718y7xzw76ip33q0w1liqk70q9074qkd198mjnijxjcrkf3";
            libraryHaskellDepends = [ base hxt mtl ];
            doHaddock = false;
            doCheck = false;
@@ -21497,8 +21621,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, mtl, parsec, stdenv }:
          mkDerivation {
            pname = "indents";
-           version = "0.4.0.0";
-           sha256 = "9478d3f8ea4dd412ffc56225c4727f295b81daffba408bf1e757b4b23859d495";
+           version = "0.4.0.1";
+           sha256 = "14cfec09c5f54b47c9905b897cd29acdb5f7975ae3512aea938e846cecaf687f";
            libraryHaskellDepends = [ base mtl parsec ];
            doHaddock = false;
            doCheck = false;
@@ -21633,8 +21757,8 @@ inherit (pkgs) which;};
            pname = "insert-ordered-containers";
            version = "0.2.1.0";
            sha256 = "d71d126bf455898492e1d2ba18b2ad04453f8b0e4daff3926a67f0560a712298";
-           revision = "5";
-           editedCabalFile = "13m83jdnxxykkc8fi2fa5qmy2mpsg3w9yphbl8cxdhmj8566pr7c";
+           revision = "6";
+           editedCabalFile = "0dna826vhnal6m213llszn68phjs27pd43f7s8wdhdmjdx1nzk72";
            libraryHaskellDepends = [
              aeson base base-compat hashable lens semigroupoids semigroups text
              transformers unordered-containers
@@ -21693,8 +21817,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "intero";
-           version = "0.1.23";
-           sha256 = "9d341ebe990d94f16c39b345b66ff3fe754d22a9c5095a6157e19fcfb43f449c";
+           version = "0.1.24";
+           sha256 = "fbe146195b7fe238450e47d7e31702f759679c3e049c32be2a05962f006a4a08";
            isLibrary = false;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -22378,17 +22502,16 @@ inherit (pkgs) which;};
       "jose-jwt" = callPackage
         ({ mkDerivation, aeson, attoparsec, base, bytestring, cereal
          , containers, cryptonite, either, memory, mtl, stdenv, text, time
-         , unordered-containers, vector
+         , transformers, transformers-compat, unordered-containers, vector
          }:
          mkDerivation {
            pname = "jose-jwt";
-           version = "0.7.7";
-           sha256 = "d46a10d565d24cd7c124b12b8754ed3a62cca7e779f4d6a17a68aafd0827b81e";
-           revision = "1";
-           editedCabalFile = "1qphrj2fb11kv79j92818lcdzvcldm18gfd85fmlrqmfjmig34wq";
+           version = "0.7.8";
+           sha256 = "d3e1693e28d2de4914011a4f573070b02a71c8e40c142c9ab8b00c8629c5f32b";
            libraryHaskellDepends = [
              aeson attoparsec base bytestring cereal containers cryptonite
-             either memory mtl text time unordered-containers vector
+             either memory mtl text time transformers transformers-compat
+             unordered-containers vector
            ];
            doHaddock = false;
            doCheck = false;
@@ -22466,8 +22589,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "json-rpc-generic";
-           version = "0.2.1.2";
-           sha256 = "946b5f28b789c6a943601215a20e4a9f53ffbd12070cc1166ed89528cf1c0dda";
+           version = "0.2.1.3";
+           sha256 = "ca4ee53106eff161467fd067b6d9ec74ed12acafa7baba96dd6841104c07bb80";
            libraryHaskellDepends = [
              aeson aeson-generic-compat base bytestring containers dlist
              scientific text transformers unordered-containers vector
@@ -22487,8 +22610,8 @@ inherit (pkgs) which;};
            pname = "json-schema";
            version = "0.7.4.1";
            sha256 = "560d6a17d6eab734f43d329e51967e3ed62f8df2a6fea4a92d06359fe77d7c96";
-           revision = "12";
-           editedCabalFile = "0x3cvndfshy4sd66m2xilyp876kvmgw5flagawamwis6hs8pfdi2";
+           revision = "13";
+           editedCabalFile = "07r9sdkhhp7wp7zyrw8mnr9dk1z83drm3jfcayv9gz28jnr3gpv1";
            libraryHaskellDepends = [
              aeson base containers generic-aeson generic-deriving mtl scientific
              text time unordered-containers vector
@@ -22623,8 +22746,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "katip";
-           version = "0.5.1.0";
-           sha256 = "16991a8f8e1d1beb7aa88f4029f23826bb613c1ac001ec3577a29b4c54949bc9";
+           version = "0.5.2.0";
+           sha256 = "fd780a39703fe84290414a20a9c6ad1d741431f057cd0dd4771eeca98bce78d7";
            libraryHaskellDepends = [
              aeson async auto-update base bytestring containers either hostname
              microlens microlens-th monad-control mtl old-locale resourcet
@@ -22834,8 +22957,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, servant, servant-foreign, stdenv, text }:
          mkDerivation {
            pname = "lackey";
-           version = "0.4.6";
-           sha256 = "a57a01a9cc7e1f82d9a732da15044a5d5244072b81d34448f6bf1e6ad2a25698";
+           version = "0.4.7";
+           sha256 = "280d505bcc90edf6872096a91986d12d771bf4b0ad9a5e4d3ae985f32b3fdc08";
            libraryHaskellDepends = [ base servant servant-foreign text ];
            doHaddock = false;
            doCheck = false;
@@ -22851,8 +22974,8 @@ inherit (pkgs) which;};
            pname = "lame";
            version = "0.1.1";
            sha256 = "b36009a35c02f7f18b4ba91d9ead7e5b47aef4eb5c0d014d4d60dd0bddfd6548";
-           revision = "3";
-           editedCabalFile = "041hv4z4xxqidnlr5jgkwp13vj4lr9dvqlrgavl3dmsd07vfj0bc";
+           revision = "4";
+           editedCabalFile = "0r364limqm570a8xd82wwpcvmcx2j7nfndg5kad022vz2v5n0smz";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [
              base bytestring data-default-class directory exceptions filepath
@@ -23435,8 +23558,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "lentil";
-           version = "1.0.9.0";
-           sha256 = "4403da26f4c6bef7848a20587422103e1e84cd446fc428dfe6370b875c78cf93";
+           version = "1.0.9.1";
+           sha256 = "3998153cde9222a81c5b04e0d6bb8ab9244987e64c5f0567b31159612cf04081";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
@@ -23670,10 +23793,10 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "lift-generics";
-           version = "0.1.1";
-           sha256 = "07cf2cc4416fb7b0e45595da8a964459498da976e18cdcc169ac2416143930cb";
+           version = "0.1.2";
+           sha256 = "0e9fbd17cd3e1af6ef1e994e7c14cfd42896e56499864e707f72246b6e2b604e";
            revision = "1";
-           editedCabalFile = "03vpmdgarz41zx1q51a4bx3x3qfvs7wfnqym8xiv4i9sxdr82yy8";
+           editedCabalFile = "02hg33ikmwl81zsw8fgppix740rdc3h8fv6nr9b9h37vizhs50zw";
            libraryHaskellDepends = [
              base generic-deriving ghc-prim template-haskell
            ];
@@ -23689,8 +23812,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "lifted-async";
-           version = "0.9.3";
-           sha256 = "97978307f34c8ab1d765724d723a13fede4112a94fe5fbf3494f00378961b461";
+           version = "0.9.3.2";
+           sha256 = "92e5f7b02ba4aa9fa7abbb124fb321f3c0bf604248b410bfc071cf3b43351e31";
            libraryHaskellDepends = [
              async base constraints lifted-base monad-control transformers-base
            ];
@@ -23745,8 +23868,8 @@ inherit (pkgs) which;};
            pname = "linear";
            version = "1.20.7";
            sha256 = "4b88b6268d327220a296b6790c82db8ebab52973735af0a9de1c734cdc07cab6";
-           revision = "3";
-           editedCabalFile = "0y7gjzrwhfsbr4vh10qkky563jiwr60cp0yx019adabvx6sf7yil";
+           revision = "4";
+           editedCabalFile = "11fxa2bqpyf99iv2b3yzi9z17y0r70afqij52lmifsyzr24zizv3";
            setupHaskellDepends = [ base Cabal cabal-doctest ];
            libraryHaskellDepends = [
              adjunctions base base-orphans binary bytes cereal containers
@@ -23825,8 +23948,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, stdenv }:
          mkDerivation {
            pname = "list-fusion-probe";
-           version = "0.1.0.6";
-           sha256 = "7682145460eb6a18406743e74710acbefda2b836e82f73a8d46aab48d5baa6b1";
+           version = "0.1.0.7";
+           sha256 = "25ff46bd20e83779c00a75a3e4c4ecffad0c5bdb0d81be3fe318caa9b5b93a48";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -24348,26 +24471,23 @@ inherit (pkgs) which;};
          }) {inherit (pkgs) file;};
       "magicbane" = callPackage
         ({ mkDerivation, aeson, aeson-qq, attoparsec, base, classy-prelude
-         , conduit, conduit-combinators, data-default, data-has, either
-         , ekg-core, ekg-wai, envy, errors, fast-logger, http-api-data
-         , http-client, http-client-tls, http-conduit, http-date
-         , http-link-header, http-media, http-types, lifted-async
-         , mime-types, monad-control, monad-logger, monad-metrics, mtl
-         , network, network-uri, raw-strings-qq, refined, servant
-         , servant-server, split, stdenv, string-conversions, text
-         , transformers, unordered-containers, wai, wai-cli
-         , wai-middleware-metrics
+         , conduit, conduit-combinators, data-default, data-has, ekg-core
+         , ekg-wai, envy, errors, fast-logger, http-api-data, http-client
+         , http-client-tls, http-conduit, http-date, http-link-header
+         , http-media, http-types, lifted-async, mime-types, monad-control
+         , monad-logger, monad-metrics, mtl, network, network-uri
+         , raw-strings-qq, refined, servant, servant-server, split, stdenv
+         , string-conversions, text, transformers, unordered-containers, wai
+         , wai-cli, wai-middleware-metrics
          }:
          mkDerivation {
            pname = "magicbane";
-           version = "0.1.3";
-           sha256 = "5a0d7986e9a3cd4c7cd2894a64c0e11d4a483b90059bd591d47173c0bca49f98";
-           revision = "1";
-           editedCabalFile = "0m4hydzw7p95lb7rjxkhvg6bnhf4qihn5fk7m7zp307svahpi0zn";
+           version = "0.1.4";
+           sha256 = "a07b86e06179c855e284974e19779737aead8acb3c998b50f5e0191e110ad2fd";
            libraryHaskellDepends = [
              aeson aeson-qq attoparsec base classy-prelude conduit
-             conduit-combinators data-default data-has either ekg-core ekg-wai
-             envy errors fast-logger http-api-data http-client http-client-tls
+             conduit-combinators data-default data-has ekg-core ekg-wai envy
+             errors fast-logger http-api-data http-client http-client-tls
              http-conduit http-date http-link-header http-media http-types
              lifted-async mime-types monad-control monad-logger monad-metrics
              mtl network network-uri raw-strings-qq refined servant
@@ -24466,8 +24586,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, base-compat, stdenv }:
          mkDerivation {
            pname = "markdown-unlit";
-           version = "0.4.0";
-           sha256 = "7c650cae7326a687265274d9e73c74ab2f7e570d7928ce9f47add9439d5b42ce";
+           version = "0.4.1";
+           sha256 = "7438d86988b5950be1a0696a9bf54bbcda0bc66b4e3af0a0cc762b7ad78b0903";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [ base base-compat ];
@@ -24807,22 +24927,22 @@ inherit (pkgs) which;};
       "mega-sdist" = callPackage
         ({ mkDerivation, base, bytestring, classy-prelude-conduit
          , conduit-extra, directory, filepath, http-conduit, optparse-simple
-         , stdenv, tar-conduit, temporary, typed-process, yaml
+         , stdenv, tar-conduit, temporary, text, typed-process, yaml
          }:
          mkDerivation {
            pname = "mega-sdist";
-           version = "0.3.0.2";
-           sha256 = "f06c0decd916515b947062beb4a981fd867a15caeaa248637cdee0a83ea5b17f";
+           version = "0.3.0.5";
+           sha256 = "cc508c45fe16f99022fd569e77177b952d5bcc4202208826b82cf3d81739bde5";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
              base bytestring classy-prelude-conduit conduit-extra directory
-             filepath http-conduit optparse-simple tar-conduit temporary
+             filepath http-conduit optparse-simple tar-conduit temporary text
              typed-process yaml
            ];
            doHaddock = false;
            doCheck = false;
-           homepage = "https://github.com/snoyberg/mega-sdist";
+           homepage = "https://github.com/snoyberg/mega-sdist#readme";
            description = "Handles uploading to Hackage from mega repos";
            license = stdenv.lib.licenses.mit;
          }) {};
@@ -24845,15 +24965,15 @@ inherit (pkgs) which;};
            license = stdenv.lib.licenses.bsd2;
          }) {};
       "memory" = callPackage
-        ({ mkDerivation, base, bytestring, deepseq, foundation, ghc-prim
-         , stdenv
+        ({ mkDerivation, base, basement, bytestring, deepseq, foundation
+         , ghc-prim, stdenv
          }:
          mkDerivation {
            pname = "memory";
-           version = "0.14.8";
-           sha256 = "d3d79d30a9f2021ce0002d66b1c57727363195c29d73cd18070a4ee6858d7224";
+           version = "0.14.11";
+           sha256 = "674cf05ccf238c8ba0aa1673da3132c4f573163dd9a21b9f5e1fb938322add4c";
            libraryHaskellDepends = [
-             base bytestring deepseq foundation ghc-prim
+             base basement bytestring deepseq foundation ghc-prim
            ];
            doHaddock = false;
            doCheck = false;
@@ -25802,8 +25922,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "monad-unlift-ref";
-           version = "0.2.0";
-           sha256 = "a97acc3384dcde65109400d77fa0cd58617c77708204d7d825b6591a65444ce1";
+           version = "0.2.1";
+           sha256 = "0f059539297478ad8b7e861682207b37b91eaf7e36bd8fdcc3f865a3c6971d1d";
            libraryHaskellDepends = [
              base constraints exceptions monad-control monad-unlift mtl
              mutable-containers resourcet stm transformers transformers-base
@@ -25918,15 +26038,15 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "mono-traversable";
-           version = "1.0.4.0";
-           sha256 = "23b83f6ff713ab464658166f6c0487a422a206ffc9912cd56f2abf229cfc9563";
+           version = "1.0.6.0";
+           sha256 = "1504033efa829001e99759a1901734e1dc9045cb8a2254628584dd2455d243ab";
            libraryHaskellDepends = [
              base bytestring containers hashable split text transformers
              unordered-containers vector vector-algorithms
            ];
            doHaddock = false;
            doCheck = false;
-           homepage = "https://github.com/snoyberg/mono-traversable";
+           homepage = "https://github.com/snoyberg/mono-traversable#readme";
            description = "Type classes for mapping, folding, and traversing monomorphic containers";
            license = stdenv.lib.licenses.mit;
          }) {};
@@ -26017,8 +26137,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "morte";
-           version = "1.6.11";
-           sha256 = "bceeef622ab4522949218fe6233955585df9fdb6941ffd0fec4f7628906bfc83";
+           version = "1.6.13";
+           sha256 = "f5181168f34f7526f23078d737aa1895ce3544e78dcbb362d9b0ad67c79d720f";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -26557,17 +26677,22 @@ inherit (pkgs) which;};
            license = stdenv.lib.licenses.mit;
          }) {};
       "netwire-input-glfw" = callPackage
-        ({ mkDerivation, base, containers, GLFW-b, mtl, netwire-input
-         , stdenv, stm
+        ({ mkDerivation, array, base, bytestring, containers, directory
+         , filepath, GLFW-b, mtl, netwire, netwire-input, OpenGL, stdenv
+         , stm, transformers
          }:
          mkDerivation {
            pname = "netwire-input-glfw";
-           version = "0.0.6";
-           sha256 = "dd095cf915005ca6d72fa75a1ea7d890e2cdde2b8f16f45a994e413e97d9dd06";
+           version = "0.0.7";
+           sha256 = "0f517a132f437c35f0847d5794d15ed0505722e39137759cbb18809c3b875be7";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
              base containers GLFW-b mtl netwire-input stm
+           ];
+           executableHaskellDepends = [
+             array base bytestring containers directory filepath GLFW-b mtl
+             netwire netwire-input OpenGL transformers
            ];
            doHaddock = false;
            doCheck = false;
@@ -26709,8 +26834,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, stdenv }:
          mkDerivation {
            pname = "network-info";
-           version = "0.2.0.8";
-           sha256 = "ecdff121f3e154c480f363bc8660959a051790bfae5b5fe573810873cedbcd76";
+           version = "0.2.0.9";
+           sha256 = "632939efc095b8dd01a813243e8cb14f4ffd1b9052a26523b9c04dc81993aa66";
            libraryHaskellDepends = [ base ];
            doHaddock = false;
            doCheck = false;
@@ -26958,15 +27083,13 @@ inherit (pkgs) which;};
            license = stdenv.lib.licenses.mit;
          }) {};
       "nix-paths" = callPackage
-        ({ mkDerivation, base, nix, process, stdenv }:
+        ({ mkDerivation, base, nix, nix-hash, process, stdenv }:
          mkDerivation {
            pname = "nix-paths";
-           version = "1.0.0.1";
-           sha256 = "742da2042caa20d63690e9c6de632eebd71b863001eb2c71645f8c72d3e9f315";
-           revision = "1";
-           editedCabalFile = "17l6x5azdiklwmiwkk05zxg50gqgdq9n5a1nyfywy05b6h7m33il";
+           version = "1.0.1";
+           sha256 = "ab37163bc2970ea16c2eb6e091d1e99ab50b8e2ba93c23d24dac761803e509f8";
            libraryHaskellDepends = [ base process ];
-           libraryToolDepends = [ nix ];
+           libraryToolDepends = [ nix nix-hash ];
            doHaddock = false;
            doCheck = false;
            homepage = "https://github.com/peti/nix-paths";
@@ -27018,14 +27141,15 @@ inherit (pkgs) which;};
          }) {};
       "nonce" = callPackage
         ({ mkDerivation, base, base64-bytestring, bytestring, entropy
-         , stdenv, text, transformers
+         , stdenv, text, transformers, unliftio, unliftio-core
          }:
          mkDerivation {
            pname = "nonce";
-           version = "1.0.4";
-           sha256 = "51661ae3dda7263f1772d628f9a7c08a319dc221b3936ceabea3b2a50f086ef6";
+           version = "1.0.5";
+           sha256 = "cdc6ab31b99af6a852f163a142cf27b917e6d168f8e0c04a9ab406bfaa7beb95";
            libraryHaskellDepends = [
              base base64-bytestring bytestring entropy text transformers
+             unliftio unliftio-core
            ];
            doHaddock = false;
            doCheck = false;
@@ -27049,8 +27173,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, stdenv, transformers, uniplate }:
          mkDerivation {
            pname = "nsis";
-           version = "0.3.1";
-           sha256 = "d747e231d8f22c810e76a1269af4bd778638da7deca3ad3480415fedb5f05c92";
+           version = "0.3.2";
+           sha256 = "b9985b8d62569c192d89b20965eed2b98186a67148b667202823c6389b8f15ca";
            libraryHaskellDepends = [ base transformers uniplate ];
            doHaddock = false;
            doCheck = false;
@@ -27259,19 +27383,19 @@ inherit (pkgs) which;};
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "objective" = callPackage
-        ({ mkDerivation, base, containers, either, exceptions, free
-         , hashable, monad-skeleton, mtl, profunctors, stdenv
-         , template-haskell, transformers, transformers-compat
-         , unordered-containers, void, witherable
+        ({ mkDerivation, base, containers, exceptions, free, hashable
+         , monad-skeleton, mtl, profunctors, stdenv, template-haskell
+         , transformers, transformers-compat, unordered-containers, void
+         , witherable
          }:
          mkDerivation {
            pname = "objective";
-           version = "1.1.1";
-           sha256 = "7ad18e779f0b5910cc5425a16bcd07dba9f6a785c83526e047e62587b8d86634";
-           revision = "2";
-           editedCabalFile = "12zyr9szwr8g8lqs20sgmi8dqvjfwnb5c4r14lamv6nn5mvs0xl2";
+           version = "1.1.2";
+           sha256 = "2fcf283ede3f447f2e65ed9c434bb8facef873ba534aa0de29eb5ffefcc86644";
+           revision = "1";
+           editedCabalFile = "039j3xac9ish0yk4w04bmip6g9p6ndfd9ngh46ya125ms4nhmyj4";
            libraryHaskellDepends = [
-             base containers either exceptions free hashable monad-skeleton mtl
+             base containers exceptions free hashable monad-skeleton mtl
              profunctors template-haskell transformers transformers-compat
              unordered-containers void witherable
            ];
@@ -27614,8 +27738,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "opml-conduit";
-           version = "0.6.0.3";
-           sha256 = "eb414fc918fd8476c012eff020c127056fcadd3b6f5c3576e247b71ab6d99fba";
+           version = "0.6.0.4";
+           sha256 = "480b557690aab79e3761ad7f1ba1d44873c3d395d2b27f2d133372a01c535d1d";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [
              base case-insensitive conduit conduit-combinators containers
@@ -27662,6 +27786,8 @@ inherit (pkgs) which;};
            pname = "optparse-applicative";
            version = "0.13.2.0";
            sha256 = "5c83cfce7e53f4d3b1f5d53f082e7e61959bf14e6be704c698c3ab7f1b956ca2";
+           revision = "1";
+           editedCabalFile = "01387dj4mr2lr8bway198pa9wcl0bxy49w0rfvy0q5s3ipd2cl8x";
            libraryHaskellDepends = [
              ansi-wl-pprint base process transformers transformers-compat
            ];
@@ -28138,15 +28264,14 @@ inherit (pkgs) which;};
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "parsers" = callPackage
-        ({ mkDerivation, attoparsec, base, base-orphans, Cabal
-         , cabal-doctest, charset, containers, mtl, parsec, scientific
-         , semigroups, stdenv, text, transformers, unordered-containers
+        ({ mkDerivation, attoparsec, base, base-orphans, charset
+         , containers, mtl, parsec, scientific, semigroups, stdenv, text
+         , transformers, unordered-containers
          }:
          mkDerivation {
            pname = "parsers";
-           version = "0.12.7";
-           sha256 = "65105b2fa169f6bb71dd0f8cbae15d916e8b6d9ee03e28ed5e8cf8e6017c4d0c";
-           setupHaskellDepends = [ base Cabal cabal-doctest ];
+           version = "0.12.8";
+           sha256 = "5aba0afdd53f3bd39b145ca858b696ba0a36d099c694742fb6a5d38900806bc8";
            libraryHaskellDepends = [
              attoparsec base base-orphans charset containers mtl parsec
              scientific semigroups text transformers unordered-containers
@@ -28642,8 +28767,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "persistent-postgresql";
-           version = "2.6.2";
-           sha256 = "5549576dd22b647721496b8fbe3eb186865054a97833f17010521556e2648004";
+           version = "2.6.2.1";
+           sha256 = "aea65b475ba05e84e2ec93e6f6c914475da7cd1935da993fd84e73c1d508ab46";
            libraryHaskellDepends = [
              aeson base blaze-builder bytestring conduit containers
              monad-control monad-logger persistent postgresql-libpq
@@ -28910,8 +29035,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "pipes";
-           version = "4.3.6";
-           sha256 = "0816b65939f0a37c08d09f921b9bbb84baf7431685c8a0a304d86c2ed7b98a5b";
+           version = "4.3.7";
+           sha256 = "30a01f4b43221ec62018b9b8298adf8b576b785eabfe085bcb9ef4dbf4c49d99";
            libraryHaskellDepends = [
              base exceptions mmorph mtl semigroups transformers void
            ];
@@ -29095,25 +29220,28 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, mwc-random, pipes, stdenv, vector }:
          mkDerivation {
            pname = "pipes-random";
-           version = "1.0.0.3";
-           sha256 = "729c3359e4f76048b0a9c656e4739c369619b8abce546a741f8d55e2a7b31193";
+           version = "1.0.0.4";
+           sha256 = "542a07e7d7aafa87201c1f00c4e98ac8f59707f776ea03b1f6f117273608659e";
+           revision = "1";
+           editedCabalFile = "0m32wz3rwxx9gdcl1chk64yspyd1ls13z03zcgjcn865mpbhz97h";
            libraryHaskellDepends = [ base mwc-random pipes vector ];
            doHaddock = false;
            doCheck = false;
+           homepage = "https://github.com/fosskers/pipes-random";
            description = "Producers for handling randomness";
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "pipes-safe" = callPackage
         ({ mkDerivation, base, containers, exceptions, monad-control, mtl
-         , pipes, stdenv, transformers, transformers-base
+         , pipes, primitive, stdenv, transformers, transformers-base
          }:
          mkDerivation {
            pname = "pipes-safe";
-           version = "2.2.5";
-           sha256 = "0242cfe67853dc5bd94c979b06da25423d8bf96c3b095f4d33b745c78605a67c";
+           version = "2.2.6";
+           sha256 = "9f1b18792617d5ab4a144b3a036b8d7d57cbc53adb98fd2605bbe172710f09f9";
            libraryHaskellDepends = [
-             base containers exceptions monad-control mtl pipes transformers
-             transformers-base
+             base containers exceptions monad-control mtl pipes primitive
+             transformers transformers-base
            ];
            doHaddock = false;
            doCheck = false;
@@ -29232,8 +29360,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "plot";
-           version = "0.2.3.8";
-           sha256 = "955001bb3b7ffdb4c3704326642348dfba5daa68bdc78d567a9e9f63f73ac7c6";
+           version = "0.2.3.9";
+           sha256 = "c6146c647010bc46500ab1043abd63d6793b654686c15728cd8003ebed27cfb3";
            libraryHaskellDepends = [
              array base cairo colour hmatrix mtl pango transformers
            ];
@@ -29472,8 +29600,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, bytestring, stdenv, unix }:
          mkDerivation {
            pname = "posix-paths";
-           version = "0.2.1.1";
-           sha256 = "dff5332ea4648bb2c4e25ce2f79d89282f653af60f03b09efe8110673709245f";
+           version = "0.2.1.3";
+           sha256 = "57d28850610f0b820c2dcc2dc4e843e733a05a6a8d8ebbdead5a7c9571cdabfc";
            libraryHaskellDepends = [ base bytestring unix ];
            doHaddock = false;
            doCheck = false;
@@ -29546,8 +29674,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "postgresql-schema";
-           version = "0.1.13";
-           sha256 = "d1019a0409eb9a13dae8f387b265141e5fded1344c1cf83cf45c0c739b83c40d";
+           version = "0.1.14";
+           sha256 = "73decc70c9fc349d0162c253eb0e92a1add5964c28ef89abfe30e97f1184d572";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -29871,8 +29999,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "pretty-show";
-           version = "1.6.13";
-           sha256 = "55ba43cb043e15738adcba3e9a5a5dd3e341026f5334fd0b9c80dfbcbc387dcd";
+           version = "1.6.15";
+           sha256 = "56d88bb9ab2f428aae21bf94b80128a0119a40e030ceda8a8e23fba7603b339a";
            isLibrary = true;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -30135,8 +30263,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "profiteur";
-           version = "0.4.3.0";
-           sha256 = "e2bfe3ac8bdb30cbacef63193bc6093e349d87decb6d6e833300766500f09aeb";
+           version = "0.4.4.0";
+           sha256 = "098e5b87b849ceef6627fd798751348e9dc54900b1bfdde981695093fdf2f622";
            isLibrary = false;
            isExecutable = true;
            enableSeparateDataOutput = true;
@@ -30438,8 +30566,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "protocol-buffers";
-           version = "2.4.5";
-           sha256 = "046a3d4c0c4de042a63fb965297c0cff85f5733f7e4d3e48fbc9a0f113da9eb5";
+           version = "2.4.6";
+           sha256 = "9a761c0d9477de1e1b12235010d24e5fb7b4c371adfb2861008c6df01f4fe0a4";
            libraryHaskellDepends = [
              array base binary bytestring containers directory filepath mtl
              parsec syb utf8-string
@@ -30456,8 +30584,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "protocol-buffers-descriptor";
-           version = "2.4.5";
-           sha256 = "c32a474b3c86ef876e6bf8029ee523e675929eaadb175205d32280a562dae167";
+           version = "2.4.6";
+           sha256 = "e9f4ad6357c5bff731454d62a86acdbf9cd38332f1844736f7da71103254b2cb";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [
              base bytestring containers protocol-buffers
@@ -30571,8 +30699,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "purescript-bridge";
-           version = "0.11.1.1";
-           sha256 = "502a311c031457ad311bfc9665238398c2a0ac09691b9ff14783127130427208";
+           version = "0.11.1.2";
+           sha256 = "9c00caff498652addaf123d4d719f7488ece06a9279a348b6a182825482f15c6";
            libraryHaskellDepends = [
              base containers directory filepath generic-deriving lens mtl text
              transformers
@@ -30758,6 +30886,27 @@ inherit (pkgs) which;};
            description = "Edge cases and special values for QuickCheck Arbitrary instances";
            license = stdenv.lib.licenses.mit;
          }) {};
+      "quickcheck-state-machine" = callPackage
+        ({ mkDerivation, ansi-wl-pprint, async, base, containers
+         , lifted-async, lifted-base, monad-control, mtl, QuickCheck
+         , quickcheck-with-counterexamples, random, stdenv, stm
+         , template-haskell, th-abstraction
+         }:
+         mkDerivation {
+           pname = "quickcheck-state-machine";
+           version = "0.3.0";
+           sha256 = "2aa4d0166cb77d400182014af3f7e4620e06e7fcd6ddfbc59429f532bd618e65";
+           libraryHaskellDepends = [
+             ansi-wl-pprint async base containers lifted-async lifted-base
+             monad-control mtl QuickCheck quickcheck-with-counterexamples random
+             stm template-haskell th-abstraction
+           ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "https://github.com/advancedtelematic/quickcheck-state-machine#readme";
+           description = "Test monadic programs using state machine based models";
+           license = stdenv.lib.licenses.bsd3;
+         }) {};
       "quickcheck-text" = callPackage
         ({ mkDerivation, base, binary, bytestring, QuickCheck, stdenv, text
          }:
@@ -30784,6 +30933,21 @@ inherit (pkgs) which;};
            homepage = "https://github.com/bos/quickcheck-unicode";
            description = "Generator and shrink functions for testing Unicode-related software";
            license = stdenv.lib.licenses.bsd2;
+         }) {};
+      "quickcheck-with-counterexamples" = callPackage
+        ({ mkDerivation, base, QuickCheck, stdenv, template-haskell }:
+         mkDerivation {
+           pname = "quickcheck-with-counterexamples";
+           version = "1.0";
+           sha256 = "0775755444042169f949474f8931bbf2a88b5cba475d190aacad9af0213fde5e";
+           revision = "3";
+           editedCabalFile = "0wz7iwpgxx977y46xis4imrhds1i341fv6mpwydr1mzhzazifvz8";
+           libraryHaskellDepends = [ base QuickCheck template-haskell ];
+           doHaddock = false;
+           doCheck = false;
+           homepage = "http://www.github.com/nick8325/quickcheck-with-counterexamples";
+           description = "Get counterexamples from QuickCheck as Haskell values";
+           license = stdenv.lib.licenses.bsd3;
          }) {};
       "raaz" = callPackage
         ({ mkDerivation, base, bytestring, deepseq, mtl, stdenv, vector }:
@@ -31020,8 +31184,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "ratel";
-           version = "0.3.7";
-           sha256 = "2c6d73a4e7d7bc8cb4d2d9529f62ddd40f2f906f0fa1945f888d2a65bba5954b";
+           version = "0.3.8";
+           sha256 = "6b6c3a46563e5e398036b8069b63ab38039f12701be5c7d7971e181f046ba5fd";
            libraryHaskellDepends = [
              aeson base bytestring case-insensitive containers http-client
              http-client-tls http-types text uuid
@@ -31348,8 +31512,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "references";
-           version = "0.3.3.0";
-           sha256 = "1c65f66f8dbcefe77e24d113ba5a9f418bcee7c11299659222d089e78d0cdda0";
+           version = "0.3.3.1";
+           sha256 = "bc07606d36639148374e7a29a67ac489c7a0ed02655311b5d633a144a746c10e";
            libraryHaskellDepends = [
              array base containers directory either filepath instance-control
              mtl template-haskell text transformers uniplate
@@ -31697,8 +31861,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "relational-query";
-           version = "0.9.5.0";
-           sha256 = "40b5e89a60304ff0ae48ad30e14704b755ef9ea20ddab5a59cf2b20171cf539f";
+           version = "0.9.5.1";
+           sha256 = "04e89861f123b02349ab1070a4b0b369fb133caabdce572916b8bb240d0c691e";
            libraryHaskellDepends = [
              array base bytestring containers dlist names-th persistable-record
              sql-words template-haskell text th-reify-compat time
@@ -31718,8 +31882,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "relational-query-HDBC";
-           version = "0.6.4.1";
-           sha256 = "5153d1f3dc57e6dcacb12243ae156d6eda257d11eff163a49d3025ac53d7d32e";
+           version = "0.6.4.2";
+           sha256 = "a44b348a066ff64c93a520fb56d02d8211ebbd6c3229b638e8b3065327068c39";
            libraryHaskellDepends = [
              base containers convertible dlist HDBC HDBC-session names-th
              persistable-record relational-query relational-schemas
@@ -31756,8 +31920,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "relational-schemas";
-           version = "0.1.4.1";
-           sha256 = "0369981dfbb01ff8c524da50c04b0e663e15899e7ae97c78b32e875007ecfdeb";
+           version = "0.1.4.2";
+           sha256 = "2f1e91cf6eb396b52e14ecb3fe466d8a4b3d0625c95c5bcf62d666ef75aa90be";
            libraryHaskellDepends = [
              base bytestring containers relational-query template-haskell time
            ];
@@ -31786,12 +31950,9 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "repline";
-           version = "0.1.6.0";
-           sha256 = "61f800cecd9f2d1545164384c827dc4d1e49ce870be8c4547b41f3ebc0902a5b";
-           isLibrary = true;
-           isExecutable = true;
+           version = "0.1.7.0";
+           sha256 = "503a035d8a380ac21c532e48c0f47006ff1c20ed9683f4906fdb304b4b9e55de";
            libraryHaskellDepends = [ base containers haskeline mtl process ];
-           executableHaskellDepends = [ base containers mtl process ];
            doHaddock = false;
            doCheck = false;
            homepage = "https://github.com/sdiehl/repline";
@@ -32162,8 +32323,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "retry";
-           version = "0.7.4.3";
-           sha256 = "208d06809b7e774e3a7c515d2bbe2edceb07898079722c1c77007c49697d8744";
+           version = "0.7.5.1";
+           sha256 = "531ff5fb56b8dfc960775c5e62bae14ee4b31ba09161980e183363dfba93ce84";
            libraryHaskellDepends = [
              base data-default-class exceptions ghc-prim random transformers
            ];
@@ -32800,8 +32961,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "selda";
-           version = "0.1.11.1";
-           sha256 = "3a6f8d04dfd2d736dbcd1b7e752cc03e09a9ef0a66c0a428d2f72f052b2db46e";
+           version = "0.1.11.2";
+           sha256 = "c97a4f9f723faf31794239ce34291eeb10123c03cb99fe1c7ba401f23529102a";
            libraryHaskellDepends = [
              base bytestring exceptions hashable mtl psqueues text time
              unordered-containers
@@ -32839,8 +33000,8 @@ inherit (pkgs) which;};
            pname = "selda-sqlite";
            version = "0.1.6.0";
            sha256 = "c67ba89114a82ece42b7e478bcf480ae0241cefb41e2e9b340a268f9f08be390";
-           revision = "1";
-           editedCabalFile = "0yf1n9iaaafnllkb2yi38ncyd3q062g4p7ln9ypb6h8gcym8s8m1";
+           revision = "2";
+           editedCabalFile = "198pg9i0lfx3fwf7b7cw0x5kial6vbf0dqwh18jnh7na3pyn1jr6";
            libraryHaskellDepends = [
              base direct-sqlite directory exceptions selda text
            ];
@@ -33683,8 +33844,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "shakespeare";
-           version = "2.0.14";
-           sha256 = "84de1f4032c81aed3056a9c63bc91cf46373c698a7429dd666fab4a326eabf48";
+           version = "2.0.14.1";
+           sha256 = "4328c3a84998662217361b31004777b9569245eebb5c83579584d215f782ea0a";
            libraryHaskellDepends = [
              aeson base blaze-html blaze-markup bytestring containers directory
              exceptions ghc-prim parsec process scientific template-haskell text
@@ -33947,10 +34108,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, bytestring, network, stdenv, unix }:
          mkDerivation {
            pname = "simple-sendfile";
-           version = "0.2.25";
-           sha256 = "0ae68821cd828b29772654b5613d514a421b1b1440d82a4b610339e67a92294d";
-           revision = "1";
-           editedCabalFile = "1axghvn2iz0gzlc0ics4q8abl15ggwvcwcmly5cxhmc32hqv8y5c";
+           version = "0.2.26";
+           sha256 = "df60ccc104ce5252cf873ee1ec39de3f7dd01a05f05b98d3e63c79b9c249597c";
            libraryHaskellDepends = [ base bytestring network unix ];
            doHaddock = false;
            doCheck = false;
@@ -34426,15 +34585,13 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, bytestring, cereal, network, stdenv }:
          mkDerivation {
            pname = "socks";
-           version = "0.5.5";
-           sha256 = "2647ea93e21ad1dfd77e942c022c8707e468d25e1ff672a88be82508034fc868";
-           revision = "1";
-           editedCabalFile = "0nz8q0xvd8y6f42bd1w3q8d8bg1qzl8ggx0a23kb3jb60g36dmvw";
+           version = "0.5.6";
+           sha256 = "fa63cd838025e18864c59755750c0cfc4ea76e140a542f07a5c682488ec78438";
            libraryHaskellDepends = [ base bytestring cereal network ];
            doHaddock = false;
            doCheck = false;
            homepage = "http://github.com/vincenthz/hs-socks";
-           description = "Socks proxy (version 5) implementation";
+           description = "Socks proxy (ver 5)";
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "solga" = callPackage
@@ -34759,8 +34916,8 @@ inherit (pkgs) which;};
            pname = "splitmix";
            version = "0";
            sha256 = "f13aa0689625b1d02cf47c748ea8858898bbdb24324f1419de68074e5d344861";
-           revision = "1";
-           editedCabalFile = "0dh4p3rzvx3zwj0bh5flf4qsiw831rb4vxmbh5jq45qkvry8z8hy";
+           revision = "2";
+           editedCabalFile = "0fl7z9lxkyvqk0d14d778j3lk8zi8jgncwq41gqi4z78a20xb2pg";
            libraryHaskellDepends = [ base random time ];
            doHaddock = false;
            doCheck = false;
@@ -34785,8 +34942,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "spreadsheet";
-           version = "0.1.3.6";
-           sha256 = "530fef774dd0892b94d38895347d5869bd9d154a4fd197b60dbc21ea999f1377";
+           version = "0.1.3.7";
+           sha256 = "840a66ccbfa0f08851e292e0b6a3f1de652f62d66d9b17e83b69153597d81ba0";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -34820,6 +34977,8 @@ inherit (pkgs) which;};
            pname = "sqlite-simple";
            version = "0.4.14.0";
            sha256 = "49fab62beb96032bfa35cd1b103d08bd6156d68e94b4508df42e2b6a7673a47f";
+           revision = "1";
+           editedCabalFile = "12ig3spsw8x30xazlp2p8hn4k4xznglsmjl3nkr3fgmmkqffl2mm";
            libraryHaskellDepends = [
              attoparsec base blaze-builder blaze-textual bytestring containers
              direct-sqlite Only text time transformers
@@ -35099,8 +35258,8 @@ inherit (pkgs) which;};
            pname = "statestack";
            version = "0.2.0.5";
            sha256 = "f4eadcf9b08c14cb084436f81e16edf78d6eeda77a3f93e38ba5d7e263ea5f66";
-           revision = "1";
-           editedCabalFile = "0kf1jdhdv9fiwlbn2915sg39x23lfxlyp2qb7jkrvx8p8v2sam7i";
+           revision = "2";
+           editedCabalFile = "0c10cv107ls0wm7gs3gvknd8a1gqvrkk97frn8lp1ch697mz44rp";
            libraryHaskellDepends = [
              base mtl transformers transformers-compat
            ];
@@ -35116,6 +35275,8 @@ inherit (pkgs) which;};
            pname = "static-canvas";
            version = "0.2.0.3";
            sha256 = "370824df08cedef2aacbbc8b855fd5cd3c80cfcc07ae2931e0f25397a61dd749";
+           revision = "1";
+           editedCabalFile = "1z3mi5z590xxmipd5fxylcmf39rrwvmwva2rkk6km1nxb5kfasl7";
            libraryHaskellDepends = [ base double-conversion free mtl text ];
            doHaddock = false;
            doCheck = false;
@@ -35872,8 +36033,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "svg-tree";
-           version = "0.6.2";
-           sha256 = "2be45d9ae5f0a6d60a89b13bf8c6ba441d2e913e43258d9b419a18d4629339ef";
+           version = "0.6.2.1";
+           sha256 = "3839209076dbf5ee2a3aa391215496f65966b90cb44f3d5b4e21ba919fe8bc0f";
            libraryHaskellDepends = [
              attoparsec base bytestring containers JuicyPixels lens linear mtl
              scientific text transformers vector xml
@@ -35975,8 +36136,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "synthesizer-core";
-           version = "0.8.1.1";
-           sha256 = "6a524a9b0290f644e6402384b5eba16d104d8747f41f7758ab7b0d152b2d3037";
+           version = "0.8.1.2";
+           sha256 = "b319116cf9f58c3357d8240c5fa54a4688007fef6a7344824c8a266a4eb32046";
            libraryHaskellDepends = [
              array base binary bytestring containers deepseq event-list
              explicit-exception filepath non-empty non-negative numeric-prelude
@@ -36218,10 +36379,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, bytestring, containers, stdenv, text }:
          mkDerivation {
            pname = "tagsoup";
-           version = "0.14.1";
-           sha256 = "028be660a864e0918f99f90471caea72af2bfbf8a64a423e181b2b29f9c64aeb";
-           isLibrary = true;
-           isExecutable = true;
+           version = "0.14.2";
+           sha256 = "888f7a9d0e1354a206fe2cad976c6b26b17509380e31487f11d1746279a4efc8";
            libraryHaskellDepends = [ base bytestring containers text ];
            doHaddock = false;
            doCheck = false;
@@ -36256,6 +36415,8 @@ inherit (pkgs) which;};
            pname = "tar";
            version = "0.5.0.3";
            sha256 = "d8d9ad876365f88bdccd02073049e58715cd5ba94de06eb98e21d595244918a3";
+           revision = "1";
+           editedCabalFile = "0ds7hjyvbpnxly0nwsrmzl2mazpw7ajm7ibv6aqa5s5vk9p1wwjx";
            libraryHaskellDepends = [
              array base bytestring containers deepseq directory filepath time
            ];
@@ -36412,8 +36573,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "tasty-golden";
-           version = "2.3.1.1";
-           sha256 = "9e87fa5b29f840731c12722049563655cedb6522b5e5792c5eb596eb352c8e5d";
+           version = "2.3.1.2";
+           sha256 = "691e1ff7f3b773d1c9fdbc2dc5813c874a1fe0adc37afa476492a35877de1921";
            libraryHaskellDepends = [
              async base bytestring containers deepseq directory filepath mtl
              optparse-applicative process tagged tasty temporary
@@ -36526,8 +36687,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "tasty-rerun";
-           version = "1.1.7";
-           sha256 = "7286b37fc1d14662333b5a31d7b1180aec314692cf23d3f6afa9381b710f1fa2";
+           version = "1.1.8";
+           sha256 = "081d7300d989ce3dfd226dcee0c72c69fa36fcb76a6572f7570a0feb5864e879";
            libraryHaskellDepends = [
              base containers mtl optparse-applicative reducers split stm tagged
              tasty transformers
@@ -37174,6 +37335,8 @@ inherit (pkgs) which;};
            pname = "text-format";
            version = "0.3.1.1";
            sha256 = "6de112764446a65370204f35a5fc4b1831106049f90918545d5dcd2ddd7fee0b";
+           revision = "1";
+           editedCabalFile = "1ap2paddh2q1ifs3nwdj0f1r7fypnsa669l7gdvgyfidz3w5vzic";
            libraryHaskellDepends = [
              array base double-conversion ghc-prim integer-gmp old-locale text
              time transformers
@@ -37236,17 +37399,17 @@ inherit (pkgs) which;};
          }) {};
       "text-ldap" = callPackage
         ({ mkDerivation, attoparsec, base, base64-bytestring, bytestring
-         , containers, dlist, semigroups, stdenv, transformers
+         , containers, dlist, stdenv, transformers
          }:
          mkDerivation {
            pname = "text-ldap";
-           version = "0.1.1.8";
-           sha256 = "f2466df70426db84435a52bb0fa82065186e49f873aba334dfd06c92ed29c039";
+           version = "0.1.1.10";
+           sha256 = "53dab64f652b5c978f7ea852cb0e3f451163fa64152f310c63c45ca87556928f";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
              attoparsec base base64-bytestring bytestring containers dlist
-             semigroups transformers
+             transformers
            ];
            executableHaskellDepends = [ base bytestring ];
            doHaddock = false;
@@ -37497,8 +37660,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, containers, stdenv, syb, template-haskell }:
          mkDerivation {
            pname = "th-expand-syns";
-           version = "0.4.3.0";
-           sha256 = "9fee68a387610574ed6445022fdcd0879a7415d910dcb6618f1de5d2001e679d";
+           version = "0.4.4.0";
+           sha256 = "cc0f52d1364ace9ba56f51afd9106a5fe01ed3f5ae45c958c1b0f83be0a6f906";
            libraryHaskellDepends = [ base containers syb template-haskell ];
            doHaddock = false;
            doCheck = false;
@@ -37746,8 +37909,8 @@ inherit (pkgs) which;};
            pname = "through-text";
            version = "0.1.0.0";
            sha256 = "933225da128906e61865ccd1da73463781b890d742cbb38f52524d94ac19b4cd";
-           revision = "2";
-           editedCabalFile = "1qbzxll2zfc2y9r17yk2077lyq6f2dw1745kxn5f4r33970128k6";
+           revision = "3";
+           editedCabalFile = "1gia9j7zq3g74kqvkzwp68d690nhddix1kpmj23d5a3zns3rxasn";
            libraryHaskellDepends = [ base bytestring case-insensitive text ];
            doHaddock = false;
            doCheck = false;
@@ -37815,8 +37978,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "tidal";
-           version = "0.9.4";
-           sha256 = "f68e0da8e7eab9693a7cb33b6cd838999f1f81d902b31bb882a76e1b490649c4";
+           version = "0.9.5";
+           sha256 = "0cc31e650ff2cd589373c7bab32f17dd3fac086693871628725d9a87184648dc";
            libraryHaskellDepends = [
              base colour containers hashable hosc mersenne-random-pure64 mtl
              parsec safe text time websockets
@@ -37911,8 +38074,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "timemap";
-           version = "0.0.4";
-           sha256 = "6e7c85c727fd9152db635c33ddb72cab5dca9ae240d41fcb653883f1bcd1d9e3";
+           version = "0.0.6";
+           sha256 = "f7176a9396cd0dba21e6491f775b043c6108d21ea6afb33587cad2ebc00a6f01";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -38042,8 +38205,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "tldr";
-           version = "0.2.2";
-           sha256 = "74b583efddbdaf5bca481538e473bcbb84f575eeb5035e4411e610f747436f79";
+           version = "0.2.3";
+           sha256 = "f24cd350fc9ee15ff533acf5c14af20d17c38244324f4e10817cbba5c44aaf87";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -38068,6 +38231,8 @@ inherit (pkgs) which;};
            pname = "tls";
            version = "1.3.11";
            sha256 = "3f008eb942874f8114f9a332f9669c44d72825ba39ce0fad89f0f8dfa6fb2703";
+           revision = "1";
+           editedCabalFile = "18afx4srhrj9395z3pc6n4scw9s4n81yvmzwjjpf1b3wfmqzn1zb";
            libraryHaskellDepends = [
              asn1-encoding asn1-types async base bytestring cereal cryptonite
              data-default-class memory mtl network transformers x509 x509-store
@@ -38104,10 +38269,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, auto-update, base, clock, psqueues, stdenv, tls }:
          mkDerivation {
            pname = "tls-session-manager";
-           version = "0.0.0.1";
-           sha256 = "68261cbedd5fd7013e33f30810f274cbfb4518da02408d31b247867320371b2f";
-           revision = "1";
-           editedCabalFile = "0hnhxfqmvkkhf37rr2ir52xyd59070jjm6s6al0alsanid2m4p01";
+           version = "0.0.0.2";
+           sha256 = "c586ccfd8da578ed2174352bea1952f55fe38023e476f851d7f0ed428aa57567";
            libraryHaskellDepends = [ auto-update base clock psqueues tls ];
            doHaddock = false;
            doCheck = false;
@@ -38228,6 +38391,8 @@ inherit (pkgs) which;};
            pname = "transformers-lift";
            version = "0.2.0.1";
            sha256 = "0bd8bf23fb29874daf9ff990bf25035e21208cfa292f9f18e8cfdb0b4b1ee09d";
+           revision = "1";
+           editedCabalFile = "1dy9vg0drkm9ria80hlfx6v72ji2fwmv3ik7lryv7i7hk0bdzk8l";
            libraryHaskellDepends = [
              base transformers writer-cps-transformers
            ];
@@ -38527,8 +38692,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "twitter-conduit";
-           version = "0.2.2.2";
-           sha256 = "37ba37933fd68b54ba75a777c04bad5ba2e877b490bfbc1603aa33764ec37d01";
+           version = "0.2.3";
+           sha256 = "69c70d99c44125e3539356b32f9c15ecd78f9a046918077ceac21f245ef457f7";
            setupHaskellDepends = [ base Cabal cabal-doctest ];
            libraryHaskellDepends = [
              aeson attoparsec authenticate-oauth base bytestring conduit
@@ -39121,8 +39286,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "units";
-           version = "2.4";
-           sha256 = "5060ef295a832b620bb60b057b57c18de4d0b187634bee691dbd64df2d6aa641";
+           version = "2.4.1";
+           sha256 = "8b63ce2dd5852c256ac291cf1ab12a04a28c119d144f7633de97d7bda31679f7";
            libraryHaskellDepends = [
              base containers deepseq lens linear mtl multimap singletons syb
              template-haskell th-desugar units-parser vector-space
@@ -39150,8 +39315,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, containers, mtl, multimap, parsec, stdenv }:
          mkDerivation {
            pname = "units-parser";
-           version = "0.1.1";
-           sha256 = "c484cc87fa54d04ef8249274d0f925d705a29218e3cb9744094663ce76c86934";
+           version = "0.1.1.2";
+           sha256 = "0a63f8b62a5d48e6c7126970cc0c6c350711b1d55ccb8182567a47ca35ce751a";
            libraryHaskellDepends = [ base containers mtl multimap parsec ];
            doHaddock = false;
            doCheck = false;
@@ -39872,6 +40037,8 @@ inherit (pkgs) which;};
            pname = "vector-sized";
            version = "0.5.1.0";
            sha256 = "2116bd082413e6b3ceb2290ac7d3aa2affcbfc76c7bebe22fbbf58e562369ae5";
+           revision = "1";
+           editedCabalFile = "16mgiqg1v8wbcng6j7nwn8j9grvjgyszdwyxzm8k0h9425f80flz";
            libraryHaskellDepends = [ base deepseq finite-typelits vector ];
            doHaddock = false;
            doCheck = false;
@@ -39922,8 +40089,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "vectortiles";
-           version = "1.2.0.5";
-           sha256 = "54a06ba1872d90579837e3a51cc8065a856f7bb3c13f973a089b8a9f1da7715d";
+           version = "1.2.0.6";
+           sha256 = "c7f6d58441ae7d14a691d9ab7ebee8c87dea9ab5c97fc770a7a9b3cb426b7ad0";
            libraryHaskellDepends = [
              base bytestring cereal containers deepseq protobuf text
              transformers vector
@@ -39989,8 +40156,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "viewprof";
-           version = "0.0.0.11";
-           sha256 = "1bbaf02fb3661542c4559cde743d0f2355b113d9e2322cc707e04eecb25317c8";
+           version = "0.0.0.12";
+           sha256 = "0562dc40bbbaccf01675190b0fdb50d35c9cdc4f4ce1072af95c4a5c35722b29";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
@@ -40162,8 +40329,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "wai-cors";
-           version = "0.2.5";
-           sha256 = "25089b8a043e0eb042ef63070ddd7ecc4d961c74526c9c00b292eda4b92d766e";
+           version = "0.2.6";
+           sha256 = "cac61023184404ba5abf8d3739e51c4862561ba56f829f6f5e69dd64216aa986";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [
              attoparsec base base-unicode-symbols bytestring case-insensitive
@@ -40198,8 +40365,10 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "wai-extra";
-           version = "3.0.20.0";
-           sha256 = "ad63ca529e812f5edec84e197a58433095a1376a127f8e9416235028bf021971";
+           version = "3.0.21.0";
+           sha256 = "7ea830ad63d52c4ce890f53755d131a858bd381bcea843e2e8494568c26dcfce";
+           isLibrary = true;
+           isExecutable = true;
            libraryHaskellDepends = [
              aeson ansi-terminal base base64-bytestring blaze-builder bytestring
              case-insensitive containers cookie data-default-class deepseq
@@ -40237,8 +40406,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "wai-logger";
-           version = "2.3.0";
-           sha256 = "90cd993c657e72a0480a988220b288aeb2561efa53d2c8f819197b6de3060bf0";
+           version = "2.3.1";
+           sha256 = "3736875b91eb1da4714167e83f8d26d61caf65e13abcac2913ea8183a34cbd51";
            libraryHaskellDepends = [
              base blaze-builder byteorder bytestring case-insensitive
              fast-logger http-types network unix unix-time wai
@@ -40493,16 +40662,17 @@ inherit (pkgs) which;};
            license = stdenv.lib.licenses.bsd3;
          }) {};
       "wai-middleware-throttle" = callPackage
-        ({ mkDerivation, base, containers, hashable, http-types, network
-         , stdenv, stm, token-bucket, transformers, wai
+        ({ mkDerivation, base, bytestring, bytestring-builder, containers
+         , hashable, http-types, mtl, network, stdenv, stm, text
+         , token-bucket, transformers, wai
          }:
          mkDerivation {
            pname = "wai-middleware-throttle";
-           version = "0.2.1.0";
-           sha256 = "862ac07bb8c8e21b4f56a6398444e2e6bdf9512a198ae394fa9d023f7cfcf87c";
+           version = "0.2.2.0";
+           sha256 = "6ab783fa8ad1fe16fa69edd532140783efc94934bd859a1dd3eb181cff36b84c";
            libraryHaskellDepends = [
-             base containers hashable http-types network stm token-bucket
-             transformers wai
+             base bytestring bytestring-builder containers hashable http-types
+             mtl network stm text token-bucket transformers wai
            ];
            doHaddock = false;
            doCheck = false;
@@ -40637,8 +40807,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "wai-session-postgresql";
-           version = "0.2.1.1";
-           sha256 = "c97919e9b15b862150c9bfa2acc7c67f5f3261aa2f4f6d884ea4f90eb4214b79";
+           version = "0.2.1.2";
+           sha256 = "39d570dd99b4dc38e7803b60b4da4bc804244ed83b3fb250a6e2191a1419ac83";
            libraryHaskellDepends = [
              base bytestring cereal cookie data-default entropy
              postgresql-simple resource-pool text time transformers wai
@@ -40782,6 +40952,8 @@ inherit (pkgs) which;};
            pname = "wave";
            version = "0.1.5";
            sha256 = "250a08b0c36870fb7fd0de7714818784eed0c4ff74377746dc1842967965fe0f";
+           revision = "1";
+           editedCabalFile = "1wvgxay0r5rpcc7yxkznxxcp1za0ifxvk87w0xrilxgb35r3izz8";
            enableSeparateDataOutput = true;
            libraryHaskellDepends = [
              base bytestring cereal containers data-default-class transformers
@@ -41107,8 +41279,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "websockets-snap";
-           version = "0.10.2.3";
-           sha256 = "95e2472aa028fdc4e7d0612027a624069a3798ea52880cd21c837b0f508db77d";
+           version = "0.10.2.4";
+           sha256 = "294d9b4f774659318197a37c0d25862ba858e799da68af76ba41c96365ba7600";
            libraryHaskellDepends = [
              base bytestring bytestring-builder io-streams mtl snap-core
              snap-server websockets
@@ -41125,8 +41297,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "weeder";
-           version = "0.1.7";
-           sha256 = "a6f929560564f74dd3e5070596fdb73313f2250bd1e1310910b449feb1f07757";
+           version = "0.1.9";
+           sha256 = "e75709bebfee8ae0dc9b04b2d2552142016c907ebed758e6f15209ee3f19b8cc";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
@@ -41145,8 +41317,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "weigh";
-           version = "0.0.5";
-           sha256 = "e93b795a56367ade4fe9b9eefa9c36a96d6de0b96ae59f4c71ab30fa96988b68";
+           version = "0.0.7";
+           sha256 = "e3d270b95c86c2345ea93a692ad48d04833c9d26330219180d5d20cbc0ecb5cc";
            libraryHaskellDepends = [
              base deepseq mtl process split template-haskell temporary
            ];
@@ -41600,8 +41772,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "wuss";
-           version = "1.1.5";
-           sha256 = "0d0bf81754d4cb0995432b543ab38eb03f03b04d6d3eb5df830401bf6b8ffa58";
+           version = "1.1.6";
+           sha256 = "3e7917beb72938dbf8026200b5e9416b2026d3c8b2c6b999c90ebd672b2253bc";
            libraryHaskellDepends = [
              base bytestring connection network websockets
            ];
@@ -41635,8 +41807,8 @@ inherit (pkgs) which;};
            pname = "x509";
            version = "1.7.2";
            sha256 = "dc0315a9e2bbfb2b3b6746b83cde901c0cc6aca5a3983f129c6f1cbe0ee0ce7b";
-           revision = "1";
-           editedCabalFile = "07mphpmj4zk5mzhp5x50a7q6w134kgymf557dcgbp643cbkcmc66";
+           revision = "2";
+           editedCabalFile = "19ybm7xzjibjd8vba48wg72kr96iirgdii0vzsb910m3zxvqj841";
            libraryHaskellDepends = [
              asn1-encoding asn1-parse asn1-types base bytestring containers
              cryptonite hourglass memory mtl pem
@@ -41656,6 +41828,8 @@ inherit (pkgs) which;};
            pname = "x509-store";
            version = "1.6.5";
            sha256 = "1aaab11da87f8c27b7475c4b0789823864e5f215fd5bf7c8a455feba807fe9d1";
+           revision = "1";
+           editedCabalFile = "1vs4xhxcznnw9iyx578bic6lms4691ilb0rzlhciz0qndmz25nag";
            libraryHaskellDepends = [
              asn1-encoding asn1-types base bytestring containers cryptonite
              directory filepath mtl pem x509
@@ -41887,8 +42061,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "xml-conduit-parse";
-           version = "0.3.1.1";
-           sha256 = "482dd0e1aceba9ad70c6885dce1c302a9dc3547e0698f00f944b687678d540c4";
+           version = "0.3.1.2";
+           sha256 = "c1aae117720128195dbbf2ce196271e4ca2973163c6a03a1b0ead3b32f936308";
            libraryHaskellDepends = [
              base conduit conduit-parse containers exceptions parsers text
              xml-conduit xml-types
@@ -42204,8 +42378,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "yahoo-finance-api";
-           version = "0.2.0.2";
-           sha256 = "f2921205edeb7b364dd6f5e19539e85ccfc47dda679aae91808bf7e3d8e53c3b";
+           version = "0.2.0.3";
+           sha256 = "7d657106e8e544c55808419026f3ec66fe09ab512a0eae7dc3e7e641fe92bca6";
            libraryHaskellDepends = [
              aeson base either http-api-data http-client mtl servant
              servant-client text time transformers vector
@@ -42300,8 +42474,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "yesod-auth";
-           version = "1.4.19";
-           sha256 = "57a6901984b113d2bdc54b4d5376cf61752ae5ecafb20875e6008184139cdee4";
+           version = "1.4.21";
+           sha256 = "0811e2f21121f599c85ccf70c1c45d2b978561b42b64f0111d38d562687a1ce3";
            libraryHaskellDepends = [
              aeson authenticate base base16-bytestring base64-bytestring binary
              blaze-builder blaze-html blaze-markup byteable bytestring conduit
@@ -42439,8 +42613,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "yesod-core";
-           version = "1.4.37";
-           sha256 = "32ad50ddcd87fe6c660f9ae326d5d21af22e6a69468edef247e589ce00858873";
+           version = "1.4.37.2";
+           sha256 = "1ad6c7595b2df973ea110ec1f833b7a006e99883d91796c701def17f920f375e";
            libraryHaskellDepends = [
              aeson auto-update base blaze-builder blaze-html blaze-markup
              byteable bytestring case-insensitive cereal clientsession conduit
@@ -42671,10 +42845,8 @@ inherit (pkgs) which;};
          }:
          mkDerivation {
            pname = "yesod-persistent";
-           version = "1.4.2";
-           sha256 = "d938894209e27a7f2a6e41906a9db02cf5c66df2236a864361571ba4e63b1056";
-           revision = "1";
-           editedCabalFile = "1aa1c3qbq223v3mslgj62jix10qff38zif8f6c8y3h7m0hix2fsf";
+           version = "1.4.3";
+           sha256 = "48ce484db879e14875dd1064ad3474a6a17e6f9e1709caa34f9c236608d7334e";
            libraryHaskellDepends = [
              base blaze-builder conduit persistent persistent-template
              resource-pool resourcet transformers yesod-core
@@ -43122,8 +43294,8 @@ inherit (pkgs) which;};
         ({ mkDerivation, base, bindings-DSL, ieee754, stdenv }:
          mkDerivation {
            pname = "yoga";
-           version = "0.0.0.1";
-           sha256 = "7b2191d2ccb7ec550496457156b74341439a214f2ed4444b3d079a468974942a";
+           version = "0.0.0.2";
+           sha256 = "2ce82bd1e87ea37cd8ad1e1bb3886bb3535ce583aea2841d07f0b47658a278be";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [ base bindings-DSL ieee754 ];
