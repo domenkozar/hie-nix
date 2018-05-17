@@ -13,8 +13,8 @@ in with pkgs; rec {
  stack2nix = import (pkgs.fetchFromGitHub {
    owner = "sectore";
    repo = "stack2nix";
-   rev = "f95772fc762c5a0d9e3caded6ca5b98711fb85ad";
-   sha256 = "02mi3945b41kj7a9pqgkd0s7ipi41lhj61xp24ady2vrb3wz0iaq";
+   rev = "4e4141d1f4a4626030f11bdf7623ccc7640f7b08";
+   sha256 = "1v5pm770pmalxwvf6ddg196m17ga5lj30r1xq2sdd7fi330k0i27";
  }) { inherit pkgs; };
  hies = runCommandNoCC "hies" {} ''
    mkdir -p $out/bin
