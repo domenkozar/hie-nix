@@ -11,10 +11,10 @@ let
   };
 in with pkgs; rec {
  stack2nix = import (pkgs.fetchFromGitHub {
-   owner = "input-output-hk";
+   owner = "sectore";
    repo = "stack2nix";
-   rev = "86f5b42524d486defe26107a37211b3faa576c39";
-   sha256 = "1xgp299nm9xbl4a2wgvch4210y2xm4c53b0lqhgsp5x8sdsyyh7c";
+   rev = "4e4141d1f4a4626030f11bdf7623ccc7640f7b08";
+   sha256 = "1v5pm770pmalxwvf6ddg196m17ga5lj30r1xq2sdd7fi330k0i27";
  }) { inherit pkgs; };
  hies = runCommandNoCC "hies" {} ''
    mkdir -p $out/bin
