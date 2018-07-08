@@ -7,6 +7,12 @@ let
       Cabal = null;
     };
   };
+  hie84Pkgs = (import ./ghc-8.4.nix { inherit pkgs; }).override {
+    overrides = self: super: {
+      # https://github.com/input-output-hk/stack2nix/issues/103
+      ghc-syb-utils = null;
+    };
+  };
 in with pkgs; rec {
  stack2nix = import (pkgs.fetchFromGitHub {
    owner = "sectore";
@@ -22,5 +28,5 @@ in with pkgs; rec {
  '';
  hie80 = hie80Pkgs.haskell-ide-engine;
  hie82 = (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
- hie84 = (import ./ghc-8.4.nix { inherit pkgs; }).haskell-ide-engine;
+ hie84 = hie84Pkgs.haskell-ide-engine;
 }
