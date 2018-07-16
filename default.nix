@@ -19,6 +19,7 @@ let
       Cabal = null;
     };
   };
+  jse = pkgs.haskell.lib.justStaticExecutables;
 in with pkgs; rec {
  stack2nix = import (pkgs.fetchFromGitHub {
    owner = "sectore";
@@ -32,7 +33,7 @@ in with pkgs; rec {
    ln -s ${hie82}/bin/hie $out/bin/hie-8.2
    ln -s ${hie84}/bin/hie $out/bin/hie-8.4
  '';
- hie80 = hie80Pkgs.haskell-ide-engine;
- hie82 = (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
- hie84 = hie84Pkgs.haskell-ide-engine;
+ hie80 = jse hie80Pkgs.haskell-ide-engine;
+ hie82 = jse (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
+ hie84 = jse hie84Pkgs.haskell-ide-engine;
 }
