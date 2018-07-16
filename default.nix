@@ -11,6 +11,12 @@ let
     overrides = self: super: {
       # https://github.com/input-output-hk/stack2nix/issues/103
       ghc-syb-utils = null;
+      # GHC 8.4 core libs
+      mtl = null;
+      parsec = null;
+      stm = null;
+      text = null;
+      Cabal = null;
     };
   };
 in with pkgs; rec {

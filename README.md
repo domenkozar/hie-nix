@@ -8,15 +8,16 @@ Hie built with specific GHC needs to match the major version of GHC used on deve
 
 # Install
 
-To install `hie-8.0` and `hie-8.2`:
+To install `hie-8.0`, `hie-8.2` and `hie-8.4`:
 
     $ nix-env -iA hies -f https://github.com/domenkozar/hie-nix/tarball/master
     $ hie-8.0 --help
     $ hie-8.2 --help
+    $ hie-8.4 --help
 
 Or for just a specific GHC and get `hie`:
 
-    $ nix-env -iA hie82 -f https://github.com/domenkozar/hie-nix/tarball/master
+    $ nix-env -iA hie84 -f https://github.com/domenkozar/hie-nix/tarball/master
     $ hie --help
  
 
