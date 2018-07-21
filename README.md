@@ -1,3 +1,6 @@
+[![Cachix](https://img.shields.io/badge/cachix-hie--nix-blue.svg)](https://hie-nix.cachix.org)
+[![Build Status](https://travis-ci.org/domenkozar/hie-nix.svg?branch=master)](https://travis-ci.org/domenkozar/hie-nix)
+
 # Purpose
 
 The purpose of this repository is to provide [HIE](https://github.com/haskell/haskell-ide-engine)
@@ -7,6 +10,10 @@ Hie built with specific GHC needs to match the major version of GHC used on deve
 
 
 # Install
+
+For linux, make sure to enable cachix:
+
+    $ cachix use hie-nix
 
 To install `hie-8.0`, `hie-8.2` and `hie-8.4`:
 
