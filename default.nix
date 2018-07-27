@@ -36,4 +36,7 @@ in with pkgs; rec {
  hie80 = jse hie80Pkgs.haskell-ide-engine;
  hie82 = jse (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
  hie84 = jse hie84Pkgs.haskell-ide-engine;
+ wrapper = import ./wrapper.nix {
+   inherit (pkgs) lib writeScriptBin; inherit hie80 hie82 hie84;
+ };
 }
