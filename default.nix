@@ -22,10 +22,11 @@ let
   jse = pkgs.haskell.lib.justStaticExecutables;
 in with pkgs; rec {
  stack2nix = import (pkgs.fetchFromGitHub {
-   owner = "sectore";
+   # https://github.com/input-output-hk/stack2nix/pull/120
+   owner = "nh2";
    repo = "stack2nix";
-   rev = "4e4141d1f4a4626030f11bdf7623ccc7640f7b08";
-   sha256 = "1v5pm770pmalxwvf6ddg196m17ga5lj30r1xq2sdd7fi330k0i27";
+   rev = "b8668e17d5b3c5035bd88720c637ae1d333c2ebe";
+   sha256 = "0dv6xy89qyrhw3yxl8qvh72skgglpvx9h5ynmhb1j8nrnxv2y5vs";
  }) { inherit pkgs; };
  hies = runCommandNoCC "hies" {} ''
    mkdir -p $out/bin
