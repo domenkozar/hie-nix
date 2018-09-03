@@ -1,6 +1,6 @@
 {
-    "owner":  "domenkozar",
+    "owner":  "NixOS",
     "repo":   "nixpkgs",
-    "rev":    "1a5a6c122ec75bc7de280ae895ae83af469a2457",
-    "sha256": "0nmm0iim03w46x888vx2n5236wvvfkm16j6a9d1nz5xmxlg6mc76"
+    "rev":    "083220867c71443b0473374e8abe871cecb8b7d9",
+    "sha256": "0ycx7zc4hsy61y1hddxb771mxdkzwhsrsdim4rw0ghb8bha5jpkr"
 }
