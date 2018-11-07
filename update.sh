@@ -1,7 +1,7 @@
 #!/bin/sh
 STACK2NIX=$(nix-build -A stack2nix)/bin/stack2nix
 
-COMMIT=06de34eb53667a6b90ead0907dd002156b1638ab
+COMMIT=8aed16403e852b816dee1a5d0c0f1f6570ca8478
 URL=https://github.com/haskell/haskell-ide-engine.git
 
 # needed since that's how stack2nix finds compiler, etc
