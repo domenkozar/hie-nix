@@ -11,14 +11,11 @@ Hie built with specific GHC needs to match the major version of GHC used on deve
 
 # Install
 
-For linux, make sure to enable cachix:
+For linux you can use binaries provided by Cachix. See [instructions](https://hie-nix.cachix.org) how to configure cachix. Otherwise (on macOS) be prepared to compile for a while.
 
-    $ cachix use hie-nix
-
-To install `hie-8.0`, `hie-8.2` and `hie-8.4`:
+To install a wrapper that will be able to pick between `hie-8.2` and `hie-8.4`:
 
     $ nix-env -iA hies -f https://github.com/domenkozar/hie-nix/tarball/master
-    $ hie-8.0 --help
     $ hie-8.2 --help
     $ hie-8.4 --help
 
@@ -37,7 +34,13 @@ Or for just a specific GHC and get `hie`:
 
 ## How do I make editor integrate the right hie version?
 
-To follow discussion how correct version of hie is picked per project, read https://github.com/haskell/haskell-ide-engine/issues/439#issuecomment-359801662
+Install `hies` which will include all supported GHC versions and the wrapper supported
+by most editors.
+
+
+## How do I integrate my editor?
+
+See https://github.com/haskell/haskell-ide-engine#editor-integration 
 
 ## Does hie-nix work with Stack?
 
