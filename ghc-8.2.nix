@@ -904,8 +904,8 @@ inherit (pkgs) zlib;};
            version = "0.8.4.1";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0iv9adrnyk658b9app823c9r72d2grjrln1xx69imi15n5d51n2d";
-             rev = "1a5640f4790bde364dcd0a61617c5ca5b85b145a";
+             sha256 = "0g2h1xwl91cp4i34szl68xkhvvm7cgm10r70lnqq3c30pan4shwq";
+             rev = "ce022201ee54fc0cf509da7942e228dd0f1b65d9";
              fetchSubmodules = true;
            };
            postUnpack = "sourceRoot+=/./submodules/HaRe; echo source root reset to $sourceRoot";
@@ -1316,8 +1316,8 @@ inherit (pkgs) zlib;};
            pname = "MissingH";
            version = "1.4.0.1";
            sha256 = "283f2afd46625d98b4e29f77edadfa5e6009a227812ee2ece10091ad6a7e9b71";
-           revision = "1";
-           editedCabalFile = "04syc14nz11fay6fm6nlixyflrfhpg4jiyxx6mnxrl6asd3cl989";
+           revision = "2";
+           editedCabalFile = "0dqrzacp2qr5bm9p8jipnadknizn9zr5gyk5fvgf9av36yl4p2rb";
            libraryHaskellDepends = [
              array base containers directory filepath hslogger HUnit mtl network
              old-locale old-time parsec process random regex-compat time unix
@@ -5731,6 +5731,8 @@ inherit (pkgs.xorg) libXfixes;};
            pname = "biocore";
            version = "0.3.1";
            sha256 = "212b7d7395138d4c231968e1f5bb047c03f61adc6c5eb36162602f42c24db41a";
+           revision = "1";
+           editedCabalFile = "0lz3inilvxn1simbpm8002iv7h9wk1gzng2vj3gpxps99zvihqc4";
            libraryHaskellDepends = [ base bytestring stringable ];
            doHaddock = false;
            doCheck = false;
@@ -6430,8 +6432,8 @@ inherit (pkgs.xorg) libXfixes;};
            version = "0.11.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0iv9adrnyk658b9app823c9r72d2grjrln1xx69imi15n5d51n2d";
-             rev = "1a5640f4790bde364dcd0a61617c5ca5b85b145a";
+             sha256 = "0g2h1xwl91cp4i34szl68xkhvvm7cgm10r70lnqq3c30pan4shwq";
+             rev = "ce022201ee54fc0cf509da7942e228dd0f1b65d9";
              fetchSubmodules = true;
            };
            postUnpack = "sourceRoot+=/./submodules/brittany; echo source root reset to $sourceRoot";
@@ -6910,6 +6912,8 @@ inherit (pkgs.xorg) libXfixes;};
            pname = "cabal-file-th";
            version = "0.2.4";
            sha256 = "0b55d7ffacd0c6324fa7c8b8f148e788e6b899fb9bf8795285dea66575bed91c";
+           revision = "1";
+           editedCabalFile = "0qbhrpn23vrqyh71vkbbs5yxwlb8m6nzfpwn6mqz2xi0wwzvl9s6";
            libraryHaskellDepends = [
              base Cabal directory pretty template-haskell
            ];
@@ -6930,8 +6934,8 @@ inherit (pkgs.xorg) libXfixes;};
            version = "0.9.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0iv9adrnyk658b9app823c9r72d2grjrln1xx69imi15n5d51n2d";
-             rev = "1a5640f4790bde364dcd0a61617c5ca5b85b145a";
+             sha256 = "0g2h1xwl91cp4i34szl68xkhvvm7cgm10r70lnqq3c30pan4shwq";
+             rev = "ce022201ee54fc0cf509da7942e228dd0f1b65d9";
              fetchSubmodules = true;
            };
            postUnpack = "sourceRoot+=/./submodules/cabal-helper; echo source root reset to $sourceRoot";
@@ -10400,6 +10404,8 @@ inherit (pkgs.xorg) libXfixes;};
            pname = "dbus";
            version = "0.10.15";
            sha256 = "6455659dc4e2b3078887506099039dc06fdda559a9cddb3ff9df5584b792baa8";
+           revision = "1";
+           editedCabalFile = "04fy208xlvdyi2ms9c2l2xd7jwi6vd0wzpv2v2s0bc2icha79rih";
            libraryHaskellDepends = [
              base bytestring cereal containers deepseq libxml-sax network parsec
              random text transformers unix vector xml-types
@@ -12204,8 +12210,8 @@ inherit (pkgs.xorg) libXfixes;};
            pname = "ether";
            version = "0.5.1.0";
            sha256 = "36980c9598c5e8e804695da3b966416a2221296022b39be437ec35263ea10085";
-           revision = "1";
-           editedCabalFile = "01q86w79xswdkq08m375xwfqjgix6bzbc4lpxz4phqvzf38lc8i5";
+           revision = "2";
+           editedCabalFile = "0ax7jq2gpb12zh4v2gcpqpckznpbkc8b743k94fljvks0yq3kl0k";
            libraryHaskellDepends = [
              base exceptions mmorph monad-control mtl reflection tagged
              template-haskell transformers transformers-base transformers-lift
@@ -14555,8 +14561,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            version = "5.9.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0iv9adrnyk658b9app823c9r72d2grjrln1xx69imi15n5d51n2d";
-             rev = "1a5640f4790bde364dcd0a61617c5ca5b85b145a";
+             sha256 = "0g2h1xwl91cp4i34szl68xkhvvm7cgm10r70lnqq3c30pan4shwq";
+             rev = "ce022201ee54fc0cf509da7942e228dd0f1b65d9";
              fetchSubmodules = true;
            };
            postUnpack = "sourceRoot+=/./submodules/ghc-mod; echo source root reset to $sourceRoot";
@@ -14596,8 +14602,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            version = "5.9.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0iv9adrnyk658b9app823c9r72d2grjrln1xx69imi15n5d51n2d";
-             rev = "1a5640f4790bde364dcd0a61617c5ca5b85b145a";
+             sha256 = "0g2h1xwl91cp4i34szl68xkhvvm7cgm10r70lnqq3c30pan4shwq";
+             rev = "ce022201ee54fc0cf509da7942e228dd0f1b65d9";
              fetchSubmodules = true;
            };
            postUnpack = "sourceRoot+=/./submodules/ghc-mod/core; echo source root reset to $sourceRoot";
@@ -14759,6 +14765,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "ghcid";
            version = "0.6.10";
            sha256 = "92abe44d24072573d08a65a84c500974169502c69a2bf7e6ee8c367e53300de3";
+           revision = "1";
+           editedCabalFile = "1aiks1kgsj8hkrwxyq980zavm7byd63lhg71w45z5gsqykki811z";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -15575,6 +15583,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "groundhog";
            version = "0.8.0.1";
            sha256 = "b95ca6023e44c0e6592b5823235f794ebb2a35b0bcb26a241216dbc06f163b63";
+           revision = "1";
+           editedCabalFile = "1bnw1bd59yfv9dkcbb2am703fqih4h6zr0zzpnz5sn91dmfadqnc";
            libraryHaskellDepends = [
              aeson attoparsec base base64-bytestring blaze-builder bytestring
              containers monad-control mtl resourcet safe-exceptions scientific
@@ -16335,11 +16345,11 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
          }:
          mkDerivation {
            pname = "haskell-ide-engine";
-           version = "0.4.0.1";
+           version = "0.5.0.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0iv9adrnyk658b9app823c9r72d2grjrln1xx69imi15n5d51n2d";
-             rev = "1a5640f4790bde364dcd0a61617c5ca5b85b145a";
+             sha256 = "0g2h1xwl91cp4i34szl68xkhvvm7cgm10r70lnqq3c30pan4shwq";
+             rev = "ce022201ee54fc0cf509da7942e228dd0f1b65d9";
              fetchSubmodules = true;
            };
            isLibrary = true;
@@ -17327,8 +17337,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            version = "0.2.2.0";
            src = fetchgit {
              url = "https://github.com/haskell/haskell-ide-engine.git";
-             sha256 = "0iv9adrnyk658b9app823c9r72d2grjrln1xx69imi15n5d51n2d";
-             rev = "1a5640f4790bde364dcd0a61617c5ca5b85b145a";
+             sha256 = "0g2h1xwl91cp4i34szl68xkhvvm7cgm10r70lnqq3c30pan4shwq";
+             rev = "ce022201ee54fc0cf509da7942e228dd0f1b65d9";
              fetchSubmodules = true;
            };
            postUnpack = "sourceRoot+=/hie-plugin-api; echo source root reset to $sourceRoot";
@@ -20551,6 +20561,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "inline-r";
            version = "0.9.2";
            sha256 = "e01f9d8ee4b2b785905bca651f7c5f235ae738a1ec25d17fbea3ff8960e64fc0";
+           revision = "1";
+           editedCabalFile = "01cxsjdxy5brdnw966928bcdivc8ab7kq91vdqkg2q801jf5jj9g";
            libraryHaskellDepends = [
              aeson base bytestring containers data-default-class deepseq
              exceptions inline-c mtl pretty primitive process reflection setenv
@@ -21242,8 +21254,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "jmacro";
            version = "0.6.15";
            sha256 = "fae43fec6f4ba9ebc1fbd5605fc1b65b1c80bb0869bcfcd80d417e6d82cb6cac";
-           revision = "1";
-           editedCabalFile = "07jghfxn4m26q8rksxn4v6pcc8mwcjdlz1ypy7dqsvhzc3hs2s4i";
+           revision = "2";
+           editedCabalFile = "0r16y3sk22vgrciaadrdzjd768mnh08s019ffgk5jma782nz9v7d";
            isLibrary = true;
            isExecutable = true;
            libraryHaskellDepends = [
@@ -23575,6 +23587,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "mainland-pretty";
            version = "0.6.1";
            sha256 = "e34624877cd2d2a2caae87598d0a9512834f560d7b17982fcdab533992dd45e0";
+           revision = "1";
+           editedCabalFile = "04q11vvfgih316ph5gvy9pg0i4v684vrfhcc1zyy227rxkgxr5b1";
            libraryHaskellDepends = [
              base containers srcloc text transformers
            ];
@@ -25462,6 +25476,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "mstate";
            version = "0.2.7";
            sha256 = "4508e3e7cc2dec5a0e75ba7dd085c73fdd4f886ac6d1a74cf071816795bb2c17";
+           revision = "1";
+           editedCabalFile = "0fj78xvvivsci437yh1raz021jh20xaz57f7ri6sxpsch3ghjy8b";
            libraryHaskellDepends = [ base monad-peel mtl stm ];
            doHaddock = false;
            doCheck = false;
@@ -41710,8 +41726,8 @@ inherit (pkgs) libjpeg; inherit (pkgs) libpng; inherit (pkgs) zlib;};
            pname = "yesod-bin";
            version = "1.6.0.3";
            sha256 = "e4db295b4c651c205a1730df38501c217d9b600f3dbc1eea21d5fa47e832aedc";
-           revision = "3";
-           editedCabalFile = "0v3bwg26ghxa1wdvwyvrffd8wwxhv1qk9g8f64ax1n8gz53k6an7";
+           revision = "4";
+           editedCabalFile = "1iw9m3z6m4n9dlwamf1kwr7pp2wpk6awf1m63zjkgw5j4vwxlcpg";
            isLibrary = false;
            isExecutable = true;
            executableHaskellDepends = [
