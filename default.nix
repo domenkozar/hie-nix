@@ -15,6 +15,8 @@ let
   };
   hie86Pkgs = (import ./ghc-8.6.nix { inherit pkgs; }).override {
     overrides = self: super: {
+      # conditional flag set to false in stackage
+      resolv = self.callPackage ./resolv.nix {};
       # https://github.com/input-output-hk/stack2nix/issues/103
       ghc-syb-utils = null;
       # GHC 8.6 core libs
