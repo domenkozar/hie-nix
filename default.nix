@@ -54,19 +54,45 @@ let
     };
   };
   jse = pkgs.haskell.lib.justStaticExecutables;
-in with pkgs; rec {
- stack2nix = pkgs.stack2nix;
- hies = runCommandNoCC "hies" {
-   buildInputs = [ makeWrapper ];
- } ''
-   mkdir -p $out/bin
-   ln -s ${hie82}/bin/hie $out/bin/hie-8.2
-   ln -s ${hie84}/bin/hie $out/bin/hie-8.4
-   ln -s ${hie86}/bin/hie $out/bin/hie-8.6
-   makeWrapper ${hie84}/bin/hie-wrapper $out/bin/hie-wrapper \
-     --prefix PATH : $out/bin
- '';
- hie82 = jse (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
- hie84 = jse hie84Pkgs.haskell-ide-engine;
- hie86 = jse hie86Pkgs.haskell-ide-engine;
+
+  wrapWithGHC = ghc: hie: xtra:
+    pkgs.runCommandNoCC "hie${ghc.version}-wrapped" { buildInputs = [ pkgs.makeWrapper ]; } ''
+      mkdir -p $out/bin
+      makeWrapper ${hie}/bin/hie $out/bin/hie \
+        --prefix PATH : ${ghc}/bin
+
+      ${xtra}
+    '';
+
+in
+
+rec {
+
+  stack2nix = pkgs.stack2nix;
+
+  hies = pkgs.runCommandNoCC "hies" {
+    buildInputs = [ pkgs.makeWrapper ];
+  } ''
+    mkdir -p $out/bin
+
+    ln -s ${hie82}/bin/hie $out/bin/hie-8.2
+    ln -s ${hie84}/bin/hie $out/bin/hie-8.4
+    ln -s ${hie86}/bin/hie $out/bin/hie-8.6
+
+    makeWrapper ${hie84}/bin/hie-wrapper $out/bin/hie-wrapper \
+      --prefix PATH : $out/bin \
+      --prefix PATH : ${pkgs.haskell.compiler.ghc844}/bin
+  '';
+
+  hie82 = wrapWithGHC pkgs.haskell.compiler.ghc822 (jse (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine) "";
+  hie84 =
+    let
+      hie = jse hie84Pkgs.haskell-ide-engine;
+    in
+      wrapWithGHC pkgs.haskell.compiler.ghc844 hie ''
+        cp ${hie}/bin/hie-wrapper $out/bin/hie-wrapper
+      '';
+
+  hie86 = wrapWithGHC pkgs.haskell.compiler.ghc862 (jse hie86Pkgs.haskell-ide-engine) "";
+
 }
