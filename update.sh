@@ -8,8 +8,8 @@ export NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs/archive/$NIXPKGS_COMMIT
 
 STACK2NIX=$(nix-build -A stack2nix --no-out-link)/bin/stack2nix
 
-COMMIT=239d07da8a3a7f80a4f0acef287256aae4cc2361
-URL=https://github.com/haskell/haskell-ide-engine.git
+HIE_COMMIT=ec5e34ca52d389b713df918f02ff63920aede4be
+HIE_URL=https://github.com/haskell/haskell-ide-engine.git
 
 $STACK2NIX --revision $HIE_COMMIT $HIE_URL --stack-yaml=stack-8.6.4.yaml > ghc-8.6.nix
 $STACK2NIX --revision $HIE_COMMIT $HIE_URL --stack-yaml=stack-8.4.4.yaml > ghc-8.4.nix
