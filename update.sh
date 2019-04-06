@@ -1,17 +1,16 @@
-#!/bin/sh
-STACK2NIX=$(nix-build -A stack2nix)/bin/stack2nix
+#!/usr/bin/env sh
 
-COMMIT=8aed16403e852b816dee1a5d0c0f1f6570ca8478
-URL=https://github.com/haskell/haskell-ide-engine.git
+set -xe
 
 # needed since that's how stack2nix finds compiler, etc
-NIXPKGS_COMMIT=$(nix-shell -p jq --run "jq -r '.rev' nixpkgs-src.json")
+NIXPKGS_COMMIT=$(nix eval --raw "(builtins.fromJSON (builtins.readFile ./nixpkgs-src.json)).rev")
 export NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs/archive/$NIXPKGS_COMMIT.tar.gz
 
-$STACK2NIX --revision $COMMIT $URL --stack-yaml=stack-8.4.3.yaml > ghc-8.4.nix
-$STACK2NIX --revision $COMMIT $URL --stack-yaml=stack-8.2.2.yaml > ghc-8.2.nix
+STACK2NIX=$(nix-build -A stack2nix --no-out-link)/bin/stack2nix
 
-# stack2nix doesn't support manually specified revisions yet: https://github.com/input-output-hk/stack2nix/issues/127
-# which haskell-ide-engine uses: https://github.com/haskell/haskell-ide-engine/pull/789
-patch --no-backup-if-mismatch ghc-8.4.nix cabal-helper-revision.diff
-patch --no-backup-if-mismatch ghc-8.2.nix cabal-helper-revision.diff
+COMMIT=bc617fe5cfea04e35d1c5d4e4b55c69665bfe47f
+URL=https://github.com/haskell/haskell-ide-engine.git
+
+$STACK2NIX --revision $COMMIT $URL --stack-yaml=stack-8.6.3.yaml > ghc-8.6.nix
+$STACK2NIX --revision $COMMIT $URL --stack-yaml=stack-8.4.4.yaml > ghc-8.4.nix
+$STACK2NIX --revision $COMMIT $URL --stack-yaml=stack-8.2.2.yaml > ghc-8.2.nix

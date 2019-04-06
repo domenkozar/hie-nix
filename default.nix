@@ -1,12 +1,6 @@
 { pkgs ? (import (import ./fetch-nixpkgs.nix) {}) }:
 
 let
-  hie80Pkgs = (import ./ghc-8.0.nix { inherit pkgs; }).override {
-    overrides = self: super: {
-      # TODO: unnecessary with https://github.com/input-output-hk/stack2nix/issues/84#issuecomment-362035573
-      Cabal = null;
-    };
-  };
   hie84Pkgs = (import ./ghc-8.4.nix { inherit pkgs; }).override {
     overrides = self: super: {
       # https://github.com/input-output-hk/stack2nix/issues/103
@@ -19,26 +13,61 @@ let
       Cabal = null;
     };
   };
+  hie86Pkgs = (import ./ghc-8.6.nix { inherit pkgs; }).override {
+    overrides = self: super: {
+      # conditional flag set to false in stackage
+      resolv = self.callPackage ./resolv.nix {};
+      # https://github.com/input-output-hk/stack2nix/issues/103
+      ghc-syb-utils = null;
+      # GHC 8.6 core libs
+  array = null;
+  base = null;
+  binary = null;
+  bytestring = null;
+  containers = null;
+  deepseq = null;
+  directory = null;
+  filepath = null;
+  ghc-boot = null;
+  ghc-boot-th = null;
+  ghc-compact = null;
+  ghc-heap = null;
+  ghc-prim = null;
+  ghci = null;
+  haskeline = null;
+  hpc = null;
+  integer-gmp = null;
+  libiserv = null;
+  mtl = null;
+  parsec = null;
+  pretty = null;
+  process = null;
+  rts = null;
+  stm = null;
+  template-haskell = null;
+  terminfo = null;
+  text = null;
+  time = null;
+  transformers = null;
+  unix = null;
+  xhtml = null;
+    };
+  };
   jse = pkgs.haskell.lib.justStaticExecutables;
 in with pkgs; rec {
- stack2nix = import (pkgs.fetchFromGitHub {
-   # https://github.com/input-output-hk/stack2nix/pull/120
-   owner = "nh2";
-   repo = "stack2nix";
-   rev = "b8668e17d5b3c5035bd88720c637ae1d333c2ebe";
-   sha256 = "0dv6xy89qyrhw3yxl8qvh72skgglpvx9h5ynmhb1j8nrnxv2y5vs";
- }) { inherit pkgs; };
+ stack2nix = pkgs.stack2nix;
  hies = runCommandNoCC "hies" {
    buildInputs = [ makeWrapper ];
  } ''
    mkdir -p $out/bin
-   ln -s ${hie80}/bin/hie $out/bin/hie-8.0
    ln -s ${hie82}/bin/hie $out/bin/hie-8.2
    ln -s ${hie84}/bin/hie $out/bin/hie-8.4
+   ln -s ${hie86}/bin/hie $out/bin/hie-8.6
+   ln -s ${hie86}/bin/hie $out/bin/hie
    makeWrapper ${hie84}/bin/hie-wrapper $out/bin/hie-wrapper \
      --prefix PATH : $out/bin
  '';
- hie80 = jse hie80Pkgs.haskell-ide-engine;
  hie82 = jse (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
  hie84 = jse hie84Pkgs.haskell-ide-engine;
+ hie86 = jse hie86Pkgs.haskell-ide-engine;
 }
