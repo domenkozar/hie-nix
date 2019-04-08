@@ -63,6 +63,7 @@ in with pkgs; rec {
    ln -s ${hie82}/bin/hie $out/bin/hie-8.2
    ln -s ${hie84}/bin/hie $out/bin/hie-8.4
    ln -s ${hie86}/bin/hie $out/bin/hie-8.6
+   ln -s ${hie86}/bin/hie $out/bin/hie
    makeWrapper ${hie84}/bin/hie-wrapper $out/bin/hie-wrapper \
      --prefix PATH : $out/bin
  '';
