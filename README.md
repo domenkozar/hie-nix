@@ -50,3 +50,15 @@ Yes, but make sure you have Nix enabled in either `stack.yaml` in your project o
     nix: 
       enable: true
 
+## How can I expose Nix's hoogle database to HIE
+
+`hie` looks at the environment variable `HIE_HOOGLE_DATABASE`, one can find the
+index by looking at Nix's Hoogle wrapper script.
+
+One can add the below to the shell's `shellHook`. Make sure to use
+`ghcWithHoogle` or `ghc.withHoogle` when creating the shell to ensure the
+Hoogle database is created.
+
+```bash
+export HIE_HOOGLE_DATABASE="$(cat $(which hoogle) | sed -n -e 's|.*--database \(.*\.hoo\).*|\1|p')"
+```
