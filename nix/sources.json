@@ -10,6 +10,18 @@
         "description": "Nixpkgs/NixOS branches that track the Nixpkgs/NixOS channels",
         "rev": "571b40d3f50466d3e91c1e609d372de96d782793"
     },
+    "haskell-ide-engine": {
+        "homepage": "",
+        "url": "https://github.com/haskell/haskell-ide-engine/archive/faee85610880ab3a46ee94e2752f3a1ee4acd1fc.tar.gz",
+        "owner": "haskell",
+        "branch": "master",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "repo": "haskell-ide-engine",
+        "type": "tarball",
+        "sha256": "18nj4j1qrq77qjlq0jm6l8agsa626v8ic7icm3k8ijxkdagbjpvd",
+        "description": "The engine for haskell ide-integration. Not an IDE",
+        "rev": "faee85610880ab3a46ee94e2752f3a1ee4acd1fc"
+    },
     "niv": {
         "homepage": "https://github.com/nmattia/niv",
         "url": "https://github.com/nmattia/niv/archive/a489b65a5c3a29983701069d1ce395b23d9bde64.tar.gz",
