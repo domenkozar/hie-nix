@@ -1,4 +1,4 @@
-{ pkgs ? (import (import ./fetch-nixpkgs.nix) {}) }:
+{ pkgs ? (import ./nix {}) }:
 
 let
   hie84Pkgs = (import ./ghc-8.4.nix { inherit pkgs; }).override {
