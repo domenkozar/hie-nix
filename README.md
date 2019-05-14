@@ -1,5 +1,8 @@
-[![Cachix](https://img.shields.io/badge/cachix-hie--nix-blue.svg)](https://hie-nix.cachix.org)
-[![Build Status](https://travis-ci.org/domenkozar/hie-nix.svg?branch=master)](https://travis-ci.org/domenkozar/hie-nix)
+# Superseeded by https://github.com/Infinisil/all-hies
+
+This project is around just for reference, please use all-hies instead.
+
+---
 
 # Purpose
 
